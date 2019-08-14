@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="FPS"
+config/name="Lumifade Miracle"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
@@ -88,4 +88,3 @@ restart={
 [rendering]
 
 quality/filters/msaa=1
-environment/default_environment="res://default_env.tres"
