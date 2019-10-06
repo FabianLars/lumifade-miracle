@@ -163,11 +163,9 @@ func aim():
 			camera_angle += change
 		camera_change = Vector2()
 
-
 func _on_Area_body_entered( body ):
 	if body.name == "Gary":
 		flying = true
-
 
 func _on_Area_body_exited( body ):
 	if body.name == "Gary":
