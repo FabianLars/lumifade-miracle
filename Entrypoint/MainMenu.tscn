@@ -1,11 +1,25 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Entrypoint/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Entrypoint/assets/label_name.png" type="Texture" id=2]
-[ext_resource path="res://Entrypoint/assets/label_continue.png" type="Texture" id=3]
-[ext_resource path="res://Entrypoint/assets/label_new_game.png" type="Texture" id=4]
-[ext_resource path="res://Entrypoint/assets/label_options.png" type="Texture" id=5]
-[ext_resource path="res://Entrypoint/assets/label_studio.png" type="Texture" id=6]
+[ext_resource path="res://Allgemein/Titillium-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Entrypoint/assets/label_studio.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
 
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
@@ -39,33 +53,45 @@ size_flags_vertical = 3
 custom_constants/separation = 30
 alignment = 1
 
-[node name="Continue" type="TextureButton" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 89.0
+[node name="Continue" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
 margin_right = 283.0
-margin_bottom = 125.0
+margin_bottom = 64.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
 action_mode = 0
-texture_normal = ExtResource( 3 )
+text = "Weiterspielen"
 
-[node name="NewGame" type="TextureButton" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 155.0
+[node name="NewGame" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 94.0
 margin_right = 283.0
-margin_bottom = 191.0
+margin_bottom = 158.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
 action_mode = 0
-texture_normal = ExtResource( 4 )
+text = "Neues Spiel"
 
-[node name="Options" type="TextureButton" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 221.0
+[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 188.0
 margin_right = 283.0
-margin_bottom = 257.0
-action_mode = 0
-texture_normal = ExtResource( 5 )
+margin_bottom = 252.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "Optionen"
+
+[node name="QuitGame" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 282.0
+margin_right = 283.0
+margin_bottom = 346.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "Spiel beenden"
 
 [node name="Version" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
 margin_top = 397.0
 margin_right = 283.0
 margin_bottom = 440.0
 rect_pivot_offset = Vector2( -546.25, -37.7693 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
 margin_left = 287.0
