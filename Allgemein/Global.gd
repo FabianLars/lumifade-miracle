@@ -15,8 +15,6 @@ func _ready():
     canvas_layer = CanvasLayer.new()
     add_child(canvas_layer)
 
-    set_debug_display(true)# TODO: Move into options menu
-
 func goto_scene(path):
     get_tree().change_scene(path)
 
