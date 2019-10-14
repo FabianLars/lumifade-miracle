@@ -1,4 +1,4 @@
-extends TextureButton
+extends MarginContainer
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -6,12 +6,12 @@ extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+# funcs connected in node-menu (Godot Ui)
 # TODO: Actually resuming the game
-func _pressed():
+func main_menu_continue_pressed():
+    Global.goto_scene("res://Entrypoint/EntryLevel.tscn")
+
+func main_menu_new_game_pressed():
     Global.goto_scene("res://Entrypoint/EntryLevel.tscn")
