@@ -1,7 +1,7 @@
 extends Node
 
 # TODO: Documentation
-const MAIN_MENU_PATH = "res://Entrypoint/MainMenu.tscn"
+const MAIN_MENU_PATH = "res://Allgemein/MainMenu.tscn"
 
 const POPUP_SCENE = preload("res://Allgemein/PauseMenu.tscn")
 var popup = null
