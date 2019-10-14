@@ -15,3 +15,6 @@ func main_menu_continue_pressed():
 
 func main_menu_new_game_pressed():
     Global.goto_scene("res://MainHub/Level.tscn")
+
+func main_menu_quit_game_pressed():
+    get_tree().quit()

@@ -107,3 +107,4 @@ margin_right = 248.0
 margin_bottom = 220.0
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/Continue" to="." method="main_menu_continue_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/NewGame" to="." method="main_menu_continue_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MenuOptions/QuitGame" to="." method="main_menu_quit_game_pressed"]
