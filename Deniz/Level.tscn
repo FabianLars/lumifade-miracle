@@ -31,7 +31,7 @@ albedo_texture = ExtResource( 2 )
 radius = 0.3
 
 [sub_resource type="Environment" id=4]
-ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_color = Color( 0.733333, 0.721569, 0.721569, 1 )
 
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 7.26827, 4.24321, 0.841606 )
@@ -113,7 +113,7 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.987704, -0.132293, -0.0833002, 0.0241316, -0.397434, 0.917314, -0.15446, -0.908045, -0.389355, 3.18659, 3.15657, -3.49437 )
+transform = Transform( 0.956613, -0.235992, 0.170881, -0.247052, -0.346067, 0.905098, -0.15446, -0.908045, -0.389355, -0.999489, 3.95753, -3.49437 )
 
 [node name="Player" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911528, 0 )
