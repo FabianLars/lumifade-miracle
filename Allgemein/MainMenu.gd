@@ -23,7 +23,7 @@ func options_menu_button_pressed(button):
     if button == "vsync":
         pass
     elif button == "debug":
-        Global.set_debug_display(/MenuContainer/OptionsMenu/CheckDebug.pressed)
+        Global.set_debug_display($MenuContainer/OptionsMenu/CheckDebug.pressed)
     elif button == "fullscreen":
         OS.window_fullscreen = !OS.window_fullscreen
     elif button == "back":
