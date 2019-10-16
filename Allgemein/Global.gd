@@ -1,23 +1,58 @@
 extends Node
 
-var current_scene = null
+# TODO: Documentation
+const MAIN_MENU_PATH = "res://Allgemein/MainMenu.tscn"
 
-# Called when the node enters the scene tree for the first time.
+const POPUP_SCENE = preload("res://Allgemein/PauseMenu.tscn")
+var popup = null
+
+var canvas_layer = null
+
+const DEBUG_DISPLAY_SCENE = preload("res://Allgemein/DebugDisplay.tscn")
+var debug_display = null
+
 func _ready():
-	var root = get_tree().get_root()
-	current_scene = root.get_child(root.get_child_count() - 1)
+    canvas_layer = CanvasLayer.new()
+    add_child(canvas_layer)
 
-#TODO: Documentation
 func goto_scene(path):
-	call_deferred("_deferred_goto_scene", path)
+    get_tree().change_scene(path)
 
-func _deferred_goto_scene(path):
-    current_scene.free()
+func _process(delta):
+    if Input.is_action_just_pressed("ui_cancel"):
+        if popup == null:
+            popup = POPUP_SCENE.instance()
+            popup.get_node("Button_quit").connect("pressed", self, "popup_quit")
+            popup.connect("popup_hide", self, "popup_closed")
+            popup.get_node("Button_resume").connect("pressed", self, "popup_closed")
 
-    var s = ResourceLoader.load(path)
+            canvas_layer.add_child(popup)
+            popup.popup_centered()
 
-    current_scene = s.instance()
+            Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-    get_tree().get_root().add_child(current_scene)
+            get_tree().paused = true
 
-    get_tree().set_current_scene(current_scene)
+func popup_closed():
+    get_tree().paused = false
+    if popup != null:
+        popup.queue_free()
+        popup = null
+
+func popup_quit():
+    get_tree().paused = false
+    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+    if popup != null:
+        popup.queue_free()
+        popup = null
+        goto_scene(MAIN_MENU_PATH)
+
+func set_debug_display(display_on):
+    if display_on == false:
+        if debug_display != null:
+            debug_display.queue_free()
+            debug_display = null
+    else:
+        if debug_display == null:
+            debug_display = DEBUG_DISPLAY_SCENE.instance()
+            canvas_layer.add_child(debug_display)
