@@ -41,7 +41,7 @@ font_data = ExtResource( 3 )
 size = 28
 font_data = ExtResource( 3 )
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="MainMenuContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3

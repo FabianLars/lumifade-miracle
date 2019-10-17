@@ -19,7 +19,7 @@ func goto_scene(path):
     get_tree().change_scene(path)
 
 func _process(delta):
-    if Input.is_action_just_pressed("ui_cancel"):
+    if Input.is_action_just_pressed("ui_cancel") and get_tree().get_current_scene().name != "MainMenuContainer":
         if popup == null:
             popup = POPUP_SCENE.instance()
             popup.get_node("Button_quit").connect("pressed", self, "popup_quit")
