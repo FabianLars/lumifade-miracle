@@ -5,7 +5,6 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Area_body_entered(body):
-	print(self.name)
 	if body.name == "Player" || body.name == "Gary" || body.name == "Character":
 		if self.name == "AreaDF":
 			Global.goto_scene("res://FabianLars/Main.tscn")
