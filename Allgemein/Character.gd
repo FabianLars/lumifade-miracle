@@ -16,8 +16,6 @@ const DEACCEL = 6
 
 #jumping
 var jump_height = 15
-var in_air = 0
-var has_contact = false
 
 #slope variables
 const MAX_SLOPE_ANGLE = 35
@@ -111,10 +109,6 @@ func walk(delta):
 
 	# move
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
-
-	if !has_contact:
-		print(in_air)
-		in_air += 1
 
 	$StairCatcher.translation.x = direction.x
 	$StairCatcher.translation.z = direction.z
