@@ -30,43 +30,49 @@ albedo_texture = ExtResource( 1 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 10, 0.01, 10 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 7.26827, 4.24321, 0.841606 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 4 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=6]
 albedo_texture = ExtResource( 5 )
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 6 )
 
-[sub_resource type="BoxShape" id=10]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 1.09119, 4.53037, 6.67846 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 1, 2.94918, 6.91948 )
 
 [sub_resource type="SpatialMaterial" id=11]
 albedo_texture = ExtResource( 8 )
 
 [sub_resource type="BoxShape" id=12]
-extents = Vector3( 1, 2.94918, 6.91948 )
-
-[sub_resource type="SpatialMaterial" id=13]
-albedo_texture = ExtResource( 8 )
-
-[sub_resource type="BoxShape" id=14]
 extents = Vector3( 6.6342, 4.43666, 1 )
 
-[sub_resource type="SpatialMaterial" id=15]
+[sub_resource type="SpatialMaterial" id=13]
 albedo_texture = ExtResource( 10 )
 
+[sub_resource type="SpatialMaterial" id=14]
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_texture = ExtResource( 13 )
+
 [sub_resource type="SpatialMaterial" id=16]
+albedo_texture = ExtResource( 13 )
 
 [sub_resource type="SpatialMaterial" id=17]
-albedo_texture = ExtResource( 13 )
+albedo_texture = ExtResource( 15 )
 
 [sub_resource type="SpatialMaterial" id=18]
-albedo_texture = ExtResource( 13 )
+albedo_texture = ExtResource( 15 )
 
 [sub_resource type="SpatialMaterial" id=19]
 albedo_texture = ExtResource( 15 )
@@ -75,10 +81,10 @@ albedo_texture = ExtResource( 15 )
 albedo_texture = ExtResource( 15 )
 
 [sub_resource type="SpatialMaterial" id=21]
-albedo_texture = ExtResource( 15 )
+albedo_texture = ExtResource( 17 )
 
 [sub_resource type="SpatialMaterial" id=22]
-albedo_texture = ExtResource( 15 )
+albedo_texture = ExtResource( 17 )
 
 [sub_resource type="SpatialMaterial" id=23]
 albedo_texture = ExtResource( 17 )
@@ -90,12 +96,6 @@ albedo_texture = ExtResource( 17 )
 albedo_texture = ExtResource( 17 )
 
 [sub_resource type="SpatialMaterial" id=26]
-albedo_texture = ExtResource( 17 )
-
-[sub_resource type="SpatialMaterial" id=27]
-albedo_texture = ExtResource( 17 )
-
-[sub_resource type="SpatialMaterial" id=28]
 albedo_texture = ExtResource( 17 )
 
 [node name="Level" type="Spatial"]
@@ -122,94 +122,94 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.2992 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall1anddoor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.693968, 0, -3.35496 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="walldoor" type="MeshInstance" parent="Wall1anddoor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225481, 0.063389, -2.94962 )
 mesh = ExtResource( 3 )
-material/0 = SubResource( 7 )
+material/0 = SubResource( 5 )
 material/1 = null
-material/2 = SubResource( 8 )
-material/3 = SubResource( 9 )
+material/2 = SubResource( 6 )
+material/3 = SubResource( 7 )
 
 [node name="Wall2" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.22216, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36021, 0, -1.50588 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="wallleftright" type="MeshInstance" parent="Wall2"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.057241, -0.0128632, -1.8473 )
 mesh = ExtResource( 7 )
-material/0 = SubResource( 11 )
+material/0 = SubResource( 9 )
 
 [node name="Wall3" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0201, 1.19698, -1.83505 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="wallleftright" type="MeshInstance" parent="Wall3"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.78072, -0.0274415, -1.81346 )
 mesh = ExtResource( 7 )
-material/0 = SubResource( 13 )
+material/0 = SubResource( 11 )
 
 [node name="Wall4" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423436, 0, 4.55201 )
-shape = SubResource( 14 )
+shape = SubResource( 12 )
 
 [node name="wallfront" type="MeshInstance" parent="Wall4"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.363136, -0.291998, 4.5781 )
 mesh = ExtResource( 9 )
-material/0 = SubResource( 15 )
+material/0 = SubResource( 13 )
 
 [node name="top" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202867, 1.90569, -1.98827 )
 mesh = ExtResource( 11 )
-material/0 = SubResource( 16 )
+material/0 = SubResource( 14 )
 
 [node name="table" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.957628, -0.381123, 2.552 )
 mesh = ExtResource( 12 )
-material/0 = SubResource( 17 )
+material/0 = SubResource( 15 )
 
 [node name="table2" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.66961, -0.314577, 0.312596 )
 mesh = ExtResource( 12 )
-material/0 = SubResource( 18 )
+material/0 = SubResource( 16 )
 
 [node name="chair" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.817771, -0.187488, 2.01133 )
 mesh = ExtResource( 14 )
-material/0 = SubResource( 19 )
-material/1 = SubResource( 20 )
-material/2 = SubResource( 21 )
-material/3 = SubResource( 22 )
+material/0 = SubResource( 17 )
+material/1 = SubResource( 18 )
+material/2 = SubResource( 19 )
+material/3 = SubResource( 20 )
 
 [node name="chair2" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.10528, -0.187488, 0.45961 )
 mesh = ExtResource( 14 )
-material/0 = SubResource( 19 )
-material/1 = SubResource( 20 )
-material/2 = SubResource( 21 )
-material/3 = SubResource( 22 )
+material/0 = SubResource( 17 )
+material/1 = SubResource( 18 )
+material/2 = SubResource( 19 )
+material/3 = SubResource( 20 )
 
 [node name="closet" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.83623, -0.105624, 2.88587 )
 mesh = ExtResource( 16 )
-material/0 = SubResource( 23 )
-material/1 = SubResource( 24 )
-material/2 = SubResource( 25 )
+material/0 = SubResource( 21 )
+material/1 = SubResource( 22 )
+material/2 = SubResource( 23 )
 
 [node name="closet2" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.83623, -0.0960739, 1.30488 )
 mesh = ExtResource( 16 )
-material/0 = SubResource( 26 )
-material/1 = SubResource( 27 )
-material/2 = SubResource( 28 )
+material/0 = SubResource( 24 )
+material/1 = SubResource( 25 )
+material/2 = SubResource( 26 )
 
 [node name="microscope" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.63131, 0.0185351, 0.174099 )
