@@ -16,6 +16,7 @@ const DEACCEL = 6
 
 #jumping
 var jump_height = 15
+var has_contact = false
 
 #slope variables
 const MAX_SLOPE_ANGLE = 35
