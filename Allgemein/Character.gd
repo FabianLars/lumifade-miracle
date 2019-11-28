@@ -9,9 +9,9 @@ var direction = Vector3()
 
 #walk variables
 var gravity = -9.8 * 3
-const MAX_SPEED = 20
-const MAX_RUNNING_SPEED = 30
-const ACCEL = 2
+const MAX_SPEED = 10
+const MAX_RUNNING_SPEED = 20
+const ACCEL = 1.5
 const DEACCEL = 6
 
 #jumping
