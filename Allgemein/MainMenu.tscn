@@ -186,7 +186,7 @@ margin_top = 220.0
 margin_right = 195.0
 margin_bottom = 220.0
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/Continue" to="." method="main_menu_continue_pressed"]
-[connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/NewGame" to="." method="main_menu_continue_pressed"]
+[connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/NewGame" to="." method="main_menu_new_game_pressed"]
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/Options" to="." method="main_menu_options_pressed"]
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/QuitGame" to="." method="main_menu_quit_game_pressed"]
 [connection signal="pressed" from="MenuContainer/OptionsMenu/CheckVSync" to="." method="options_menu_button_pressed" binds= [ "vsync" ]]

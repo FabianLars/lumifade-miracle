@@ -122,7 +122,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36021, 0, -1.50588 )
 shape = SubResource( 8 )
 
 [node name="wallleftright" type="MeshInstance" parent="Wall2"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.057241, -0.0128632, -1.8473 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.057241, -0.0128632, -1.8473 )
 mesh = ExtResource( 7 )
 material/0 = SubResource( 9 )
 
@@ -133,7 +133,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0201, 1.19698, -1.83505 )
 shape = SubResource( 10 )
 
 [node name="wallleftright" type="MeshInstance" parent="Wall3"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.78072, -0.0274415, -1.81346 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.78072, -0.0274415, -1.81346 )
 mesh = ExtResource( 7 )
 material/0 = SubResource( 11 )
 
@@ -144,7 +144,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423436, 0, 4.55201 )
 shape = SubResource( 12 )
 
 [node name="wallfront" type="MeshInstance" parent="Wall4"]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.363136, -0.291998, 4.5781 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.363136, -0.291998, 4.5781 )
 mesh = ExtResource( 9 )
 material/0 = SubResource( 13 )
 
@@ -167,7 +167,7 @@ material/7 = null
 material/8 = null
 
 [node name="shelf" type="MeshInstance" parent="."]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 4.79298, 1.11602, -3.72184 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.79298, 1.11602, -3.72184 )
 mesh = ExtResource( 13 )
 material/0 = null
 material/1 = null
@@ -199,19 +199,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4921, 2.05931, -2.50465 )
 transform = Transform( -0.999959, 0, 0.0090945, 0, 1, 0, -0.0090945, 0, -0.999959, -2.01482, 1.73534, -2.88603 )
 
 [node name="lab_bench" parent="." instance=ExtResource( 17 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 4.62137, -0.69517, 0.27037 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.62137, -0.69517, 0.27037 )
 
 [node name="cabinet" parent="." instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.62435, 2.32205, -0.819354 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.62435, 2.32205, -0.819354 )
 
 [node name="cabinet2" parent="." instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.62435, 2.32205, 2.65873 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.62435, 2.32205, 2.65873 )
 
 [node name="lab_bench2" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.631, 0.207, -2.41 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.631, 0.207, -2.41 )
 
 [node name="sink" parent="." instance=ExtResource( 20 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.907, 0.63, 3.49378 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.907, 0.63, 3.49378 )
 
 [node name="container3" parent="." instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04881, -0.291467, 1.04137 )
@@ -229,49 +229,49 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.469114, 0.320095, -0.56119 
 transform = Transform( 0.878105, 0.296828, 0.375266, -0.478468, 0.544752, 0.688704, 0, -0.784308, 0.620372, 0, 3.46342, 3.50669 )
 
 [node name="butto" parent="." instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 2.48365, 1.69502, -8.9786 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.48365, 1.69502, -8.9786 )
 
 [node name="pc" parent="." instance=ExtResource( 24 )]
-transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, 4.78865, 1.77558, 0.760443 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.78865, 1.77558, 0.760443 )
 
 [node name="certifuge" parent="." instance=ExtResource( 25 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 4.5924, 1.5948, -1.73373 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.5924, 1.5948, -1.73373 )
 
 [node name="bin" parent="." instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51322, 0.258824, -6.52664 )
 
 [node name="testtube" parent="." instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -1.29969, 2.47275, -2.86877 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.29969, 2.47275, -2.86877 )
 
 [node name="testtube2" parent="." instance=ExtResource( 27 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.856793, 2.47275, -2.86877 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.856793, 2.47275, -2.86877 )
 
 [node name="testtube3" parent="." instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.411274, 1.53874, -3.41953 )
 
 [node name="substance" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -1.35019 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -1.35019 )
 
 [node name="substance2" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -1.18424 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -1.18424 )
 
 [node name="substance3" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -1.00351 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -1.00351 )
 
 [node name="substance4" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -0.810957 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -0.810957 )
 
 [node name="substance5" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -0.747183 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -0.747183 )
 
 [node name="substance6" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -0.682183 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -0.682183 )
 
 [node name="substance7" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -0.501953 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -0.501953 )
 
 [node name="substance8" parent="." instance=ExtResource( 29 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 5.24926, 2.64961, -0.276061 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.24926, 2.64961, -0.276061 )
 
 [node name="substance_2" parent="." instance=ExtResource( 30 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2416, 2.94328, -1.3485 )
@@ -286,4 +286,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2416, 2.94328, -1.01327 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83851, 0.667164, -0.229844 )
 
 [node name="Scene Root" parent="." instance=ExtResource( 15 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.78884, 1.96937, 4.07795 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.78884, 1.96937, 4.07795 )
