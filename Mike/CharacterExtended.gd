@@ -18,7 +18,7 @@ const DEACCEL = 6
 var jump_height = 15
 var has_contact = false
 
-#Tools 
+#Tools
 var current_tool_name = "TRANSLOCATOR"
 var teleportAvailable = false
 
@@ -85,7 +85,7 @@ func inputandmovement(delta):
 		if stair_angle < MAX_STAIR_SLOPE:
 			velocity.y = STAIR_JUMP_HEIGHT
 			has_contact = false
-	
+
 	#Tools:
 	#Aktuelles Tool
 	if Input.is_action_pressed("Key1"):
@@ -94,12 +94,12 @@ func inputandmovement(delta):
 	if Input.is_action_pressed("Key2"):
 		current_tool_name = "UNARMED"
 		print(current_tool_name)
-	
+
 	#Fire
 	if Input.is_action_just_pressed("primary.fire") and current_tool_name == "TRANSLOCATOR":
 		shootDisc()
 		print("Disc geschossen")
-		teleportAvailable = true 
+		teleportAvailable = true
 
 	if Input.is_action_just_pressed("alt.fire") and teleportAvailable and current_tool_name == "TRANSLOCATOR":
 		#Teleportieren
