@@ -70,9 +70,11 @@ extents = Vector3( 1.5, 3, 0.1 )
 extents = Vector3( 2, 3, 1.5 )
 
 [node name="Level" type="Spatial"]
+editor/display_folded = true
 script = SubResource( 1 )
 
 [node name="Room" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="OmniLight" type="OmniLight" parent="Room"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
@@ -104,7 +106,7 @@ shape = SubResource( 4 )
 
 [node name="Wall1" type="MeshInstance" parent="Room/Walls"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 10, -10 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 10, -10 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -115,7 +117,7 @@ shape = SubResource( 5 )
 
 [node name="Wall2" type="MeshInstance" parent="Room/Walls"]
 editor/display_folded = true
-transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10, 10, 0 )
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 10, 10, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -126,7 +128,7 @@ shape = SubResource( 6 )
 
 [node name="Wall3" type="MeshInstance" parent="Room/Walls"]
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10, 10 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 10, 10 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -137,7 +139,7 @@ shape = SubResource( 7 )
 
 [node name="Wall4" type="MeshInstance" parent="Room/Walls"]
 editor/display_folded = true
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -10, 10, 0 )
+transform = Transform( -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0, 1, -10, 10, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -147,6 +149,7 @@ material/0 = null
 shape = SubResource( 8 )
 
 [node name="Doors" type="Spatial" parent="Room"]
+editor/display_folded = true
 
 [node name="DoorF" type="MeshInstance" parent="Room/Doors"]
 editor/display_folded = true
@@ -199,7 +202,7 @@ script = ExtResource( 1 )
 shape = SubResource( 16 )
 
 [node name="DoorM" type="MeshInstance" parent="Room/Doors"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.9, 3, 0 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -9.9, 3, 0 )
 mesh = SubResource( 14 )
 material/0 = null
 
