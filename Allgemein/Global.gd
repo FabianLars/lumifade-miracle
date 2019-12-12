@@ -29,6 +29,7 @@ func _process(delta):
             popup.get_node("Button_quit").connect("pressed", self, "popup_quit")
             popup.connect("popup_hide", self, "popup_closed")
             popup.get_node("Button_resume").connect("pressed", self, "popup_closed")
+            popup.get_node("Button_hub").connect("pressed", self, "popup_hub")
 
             canvas_layer.add_child(popup)
             popup.popup_centered()
@@ -39,6 +40,13 @@ func _process(delta):
 
 func popup_closed():
     get_tree().paused = false
+    if popup != null:
+        popup.queue_free()
+        popup = null
+
+func popup_hub():
+    get_tree().paused = false
+    goto_scene("res://MainHub/Level.tscn")
     if popup != null:
         popup.queue_free()
         popup = null
