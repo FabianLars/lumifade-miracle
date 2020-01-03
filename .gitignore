@@ -1,5 +1,6 @@
 .import/
 *.import
 .mono/
+.idea/
 Lumifade Miracle.csproj
 Lumifade Miracle.sln
