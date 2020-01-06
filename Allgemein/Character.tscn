@@ -22,6 +22,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
 [node name="Camera" type="Camera" parent="Head"]
 far = 200.0
 
+[node name="CollisionRay" type="RayCast" parent="Head/Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -10 )
+
 [node name="Tail" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49056, 0 )
 enabled = true

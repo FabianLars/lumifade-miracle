@@ -6,6 +6,9 @@ const MAIN_MENU_PATH = "res://Allgemein/MainMenu.tscn"
 const POPUP_SCENE = preload("res://Allgemein/PauseMenu.tscn")
 var popup = null
 
+const OVERLAY_SCENE = preload("res://Allgemein/Overlay.tscn")
+var overlay = null
+
 var canvas_layer = null
 
 const DEBUG_DISPLAY_SCENE = preload("res://Allgemein/DebugDisplay.tscn")
@@ -93,3 +96,13 @@ func load_game():
             player_rota_cam = Vector3(current_line["rota_cam"], 0, 0)
             goto_scene(current_line["level"])
     save_game.close()
+
+func set_overlay(overlay_on):
+    if overlay_on == false:
+        if overlay != null:
+            overlay.queue_free()
+            overlay = null
+    else:
+        if overlay == null:
+            overlay = OVERLAY_SCENE.instance()
+            canvas_layer.add_child(overlay)

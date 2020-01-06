@@ -39,6 +39,19 @@ func _ready():
 func _physics_process(delta):
     if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
         Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+    # Interacting with objects via raycasts
+    var ray = $Head/Camera/CollisionRay
+    if ray.is_colliding():
+        if ray.get_collider().get_name() == "SB_TV":
+            Global.set_overlay(true)
+            if Input.is_action_pressed("ui_E"):
+                Global.goto_scene("res://Lukas/Main.tscn")
+        else:
+            Global.set_overlay(false)
+    else:
+        Global.set_overlay(false)
+
     aim()
     walk(delta)
 
