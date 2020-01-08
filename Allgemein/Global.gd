@@ -24,6 +24,7 @@ func _ready():
 
 func goto_scene(path):
     get_tree().change_scene(path)
+    set_overlay(false)
 
 func _process(delta):
     if Input.is_action_just_pressed("ui_cancel") and get_tree().get_current_scene().name != "MainMenuContainer":
