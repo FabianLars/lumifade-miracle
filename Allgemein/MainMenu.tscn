@@ -55,8 +55,8 @@ script = ExtResource( 1 )
 [node name="MenuContainer" type="HBoxContainer" parent="."]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 904.0
-margin_bottom = 520.0
+margin_right = 1160.0
+margin_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -65,60 +65,60 @@ alignment = 1
 
 [node name="StartMenu" type="VBoxContainer" parent="MenuContainer"]
 editor/display_folded = true
-margin_right = 390.0
-margin_bottom = 440.0
+margin_right = 518.0
+margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Title" type="TextureRect" parent="MenuContainer/StartMenu"]
-margin_right = 390.0
+margin_right = 518.0
 margin_bottom = 43.0
 texture = ExtResource( 2 )
 
 [node name="MenuOptions" type="VBoxContainer" parent="MenuContainer/StartMenu"]
 margin_top = 47.0
-margin_right = 390.0
-margin_bottom = 393.0
+margin_right = 518.0
+margin_bottom = 513.0
 size_flags_vertical = 3
 custom_constants/separation = 30
 alignment = 1
 
 [node name="Continue" type="Button" parent="MenuContainer/StartMenu/MenuOptions"]
-margin_right = 390.0
-margin_bottom = 64.0
+margin_right = 518.0
+margin_bottom = 94.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 text = "Weiterspielen"
 
 [node name="NewGame" type="Button" parent="MenuContainer/StartMenu/MenuOptions"]
-margin_top = 94.0
-margin_right = 390.0
-margin_bottom = 158.0
+margin_top = 124.0
+margin_right = 518.0
+margin_bottom = 218.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "Neues Spiel"
 
 [node name="Options" type="Button" parent="MenuContainer/StartMenu/MenuOptions"]
-margin_top = 188.0
-margin_right = 390.0
-margin_bottom = 252.0
+margin_top = 248.0
+margin_right = 518.0
+margin_bottom = 342.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Optionen"
 
 [node name="QuitGame" type="Button" parent="MenuContainer/StartMenu/MenuOptions"]
-margin_top = 282.0
-margin_right = 390.0
-margin_bottom = 346.0
+margin_top = 372.0
+margin_right = 518.0
+margin_bottom = 466.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
 text = "Spiel beenden"
 
 [node name="Version" type="TextureRect" parent="MenuContainer/StartMenu"]
-margin_top = 397.0
-margin_right = 390.0
-margin_bottom = 440.0
+margin_top = 517.0
+margin_right = 518.0
+margin_bottom = 560.0
 rect_pivot_offset = Vector2( -546.25, -37.7693 )
 texture = ExtResource( 4 )
 
@@ -174,17 +174,17 @@ text = "Zurück zum Hauptmenü"
 
 [node name="CenterContainer" type="CenterContainer" parent="MenuContainer"]
 editor/display_folded = true
-margin_left = 394.0
-margin_right = 784.0
-margin_bottom = 440.0
+margin_left = 522.0
+margin_right = 1040.0
+margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MainIllustration" type="TextureRect" parent="MenuContainer/CenterContainer"]
-margin_left = 195.0
-margin_top = 220.0
-margin_right = 195.0
-margin_bottom = 220.0
+margin_left = 259.0
+margin_top = 280.0
+margin_right = 259.0
+margin_bottom = 280.0
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/Continue" to="." method="main_menu_continue_pressed"]
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/NewGame" to="." method="main_menu_new_game_pressed"]
 [connection signal="pressed" from="MenuContainer/StartMenu/MenuOptions/Options" to="." method="main_menu_options_pressed"]

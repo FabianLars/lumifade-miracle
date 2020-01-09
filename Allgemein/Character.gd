@@ -25,6 +25,9 @@ const MAX_SLOPE_ANGLE = 35
 const MAX_STAIR_SLOPE = 20
 const STAIR_JUMP_HEIGHT = 6
 
+onready var ray = $Head/Camera/CollisionRay
+var ziellevel = null
+
 func _ready():
     if Global.player_pos != null:
         translation = Global.player_pos
@@ -39,8 +42,58 @@ func _ready():
 func _physics_process(delta):
     if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
         Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-    aim()
-    walk(delta)
+
+    # Interacting with objects via raycasts
+    if ray.is_colliding():
+        if ray.get_collider().get_name() == "SB_TV":
+            Global.set_overlay(true)
+            if Input.is_action_pressed("ui_E"):
+                ziellevel = 'Lukas'
+        elif ray.get_collider().get_name() == "SB_Sessel":
+            Global.set_overlay(true)
+            if Input.is_action_pressed("ui_E"):
+                ziellevel = 'Deniz'
+        elif ray.get_collider().get_name() == "SB_Notebook":
+            Global.set_overlay(true)
+            if Input.is_action_pressed("ui_E"):
+                ziellevel = 'Mike'
+        else:
+            Global.set_overlay(false)
+    else:
+        Global.set_overlay(false)
+
+    if(ziellevel != null):
+
+        if ziellevel == 'Lukas':
+            translation = translation.linear_interpolate(Vector3(-5.5, 2.8, 7.75), delta*3)
+            rotation = rotation.linear_interpolate(Vector3(deg2rad(5.5), deg2rad(180), 0), delta*3)
+            $Head.rotation = $Head.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+            $Head/Camera.rotation = $Head/Camera.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+
+            if translation.x >= -5.52 and translation.x <= -5.48:
+                Global.goto_scene("res://Lukas/Main.tscn")
+
+        elif ziellevel == 'Deniz':
+            translation = translation.linear_interpolate(Vector3(7.3, 1.3, 7.35), delta*3)
+            rotation = rotation.linear_interpolate(Vector3(deg2rad(-55), deg2rad(-132), 0), delta*3)
+            $Head.rotation = $Head.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+            $Head/Camera.rotation = $Head/Camera.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+
+            if translation.y >= 1.28 and translation.y <= 1.32:
+                Global.goto_scene("res://Deniz/Level.tscn")
+
+        elif ziellevel == 'Mike':
+            translation = translation.linear_interpolate(Vector3(4.7, 1, -2.85), delta*3)
+            rotation = rotation.linear_interpolate(Vector3(0, deg2rad(-48), 0), delta*3)
+            $Head.rotation = $Head.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+            $Head/Camera.rotation = $Head/Camera.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
+
+            if translation.y >= 0.98 and translation.y <= 1.02:
+                Global.goto_scene("res://Mike/Main.tscn")
+
+    else:
+        aim()
+        walk(delta)
 
 func _input(event):
     if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
