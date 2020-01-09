@@ -66,7 +66,7 @@ func _physics_process(delta):
 
         if ziellevel == 'Lukas':
             translation = translation.linear_interpolate(Vector3(-5.5, 2.8, 7.75), delta*3)
-            rotation = rotation.linear_interpolate(Vector3(deg2rad(5.5), deg2rad(180), 0), delta*3)
+            rotation = rotation.linear_interpolate(Vector3(deg2rad(5.5), deg2rad(-180), 0), delta*3)
             $Head.rotation = $Head.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
             $Head/Camera.rotation = $Head/Camera.rotation.linear_interpolate(Vector3(0, 0, 0), delta*3)
 
