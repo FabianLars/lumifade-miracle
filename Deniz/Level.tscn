@@ -1,32 +1,45 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Deniz/Model/floor.png" type="Texture" id=1]
-[ext_resource path="res://Deniz/Model/shelf.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Allgemein/Character.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Deniz/Model/wallleftright.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://Deniz/Model/wallleftright.png" type="Texture" id=5]
-[ext_resource path="res://Deniz/Model/wallfront.obj" type="ArrayMesh" id=6]
-[ext_resource path="res://Deniz/Model/top.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://Allgemein/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Deniz/Model/wall1.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Deniz/Model/walldoor.png" type="Texture" id=4]
+[ext_resource path="res://Deniz/Model/wallleftright.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Deniz/Model/wallleftright.png" type="Texture" id=6]
+[ext_resource path="res://Deniz/Model/wallfront.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://Deniz/Model/microscope.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://Deniz/Model/container.obj" type="ArrayMesh" id=9]
-[ext_resource path="res://Deniz/Model/flaskstand.glb" type="PackedScene" id=10]
+[ext_resource path="res://Deniz/microscope.gd" type="Script" id=9]
+[ext_resource path="res://Deniz/Model/container.obj" type="ArrayMesh" id=10]
 [ext_resource path="res://Deniz/Model/lab_bench.glb" type="PackedScene" id=11]
-[ext_resource path="res://Deniz/Model/cabinet.glb" type="PackedScene" id=12]
-[ext_resource path="res://Deniz/Model/lab_bench2.glb" type="PackedScene" id=13]
-[ext_resource path="res://Deniz/Model/sink.glb" type="PackedScene" id=14]
-[ext_resource path="res://Deniz/Model/cabinet3.glb" type="PackedScene" id=15]
-[ext_resource path="res://Deniz/Model/lab_chair.glb" type="PackedScene" id=16]
-[ext_resource path="res://Deniz/Model/pc.glb" type="PackedScene" id=17]
-[ext_resource path="res://Deniz/Model/certifuge.glb" type="PackedScene" id=18]
-[ext_resource path="res://Deniz/Model/bin.glb" type="PackedScene" id=19]
-[ext_resource path="res://Deniz/Model/testtube_stand.glb" type="PackedScene" id=20]
-[ext_resource path="res://Deniz/Model/testtube_stand_open.glb" type="PackedScene" id=21]
-[ext_resource path="res://Deniz/Model/water.glb" type="PackedScene" id=22]
-[ext_resource path="res://Deniz/Model/wall1.obj" type="ArrayMesh" id=23]
-[ext_resource path="res://Deniz/Model/walldoor.png" type="Texture" id=24]
-[ext_resource path="res://Deniz/Model/floor2.glb" type="PackedScene" id=25]
-[ext_resource path="res://Deniz/Model/lab_bench3.glb" type="PackedScene" id=26]
-[ext_resource path="res://Deniz/Model/lab_bench4.glb" type="PackedScene" id=27]
+[ext_resource path="res://Deniz/Model/sink.glb" type="PackedScene" id=12]
+[ext_resource path="res://Deniz/Model/cabinet3.glb" type="PackedScene" id=13]
+[ext_resource path="res://Deniz/Model/lab_chair.glb" type="PackedScene" id=14]
+[ext_resource path="res://Deniz/Model/pc.glb" type="PackedScene" id=15]
+[ext_resource path="res://Deniz/Model/certifuge.glb" type="PackedScene" id=16]
+[ext_resource path="res://Deniz/Model/certifuge.gd" type="Script" id=17]
+[ext_resource path="res://Deniz/Model/bin.glb" type="PackedScene" id=18]
+[ext_resource path="res://Deniz/Model/testtube_stand.glb" type="PackedScene" id=19]
+[ext_resource path="res://Deniz/Model/testtube_stand_open.glb" type="PackedScene" id=20]
+[ext_resource path="res://Deniz/Model/water.glb" type="PackedScene" id=21]
+[ext_resource path="res://Deniz/Model/floor2.glb" type="PackedScene" id=22]
+[ext_resource path="res://Deniz/Model/lab_bench3.glb" type="PackedScene" id=23]
+[ext_resource path="res://Deniz/Model/cabinet.glb" type="PackedScene" id=24]
+[ext_resource path="res://Deniz/Model/lab_bench4.glb" type="PackedScene" id=25]
+[ext_resource path="res://Deniz/Model/lab_chair2.glb" type="PackedScene" id=26]
+[ext_resource path="res://Deniz/Model/fire_ex.glb" type="PackedScene" id=27]
+[ext_resource path="res://Deniz/Model/shelf.obj" type="ArrayMesh" id=28]
+[ext_resource path="res://Deniz/Model/clock.glb" type="PackedScene" id=29]
+[ext_resource path="res://Deniz/Model/laptop.glb" type="PackedScene" id=30]
+[ext_resource path="res://Deniz/Model/first_aid_cit.glb" type="PackedScene" id=31]
+[ext_resource path="res://Deniz/Model/board.glb" type="PackedScene" id=32]
+[ext_resource path="res://Deniz/Model/board.gd" type="Script" id=33]
+[ext_resource path="res://Deniz/Model/microscope2.obj" type="ArrayMesh" id=34]
+[ext_resource path="res://Deniz/Model/pse.glb" type="PackedScene" id=35]
+[ext_resource path="res://Deniz/Model/microscope2.glb" type="PackedScene" id=36]
+[ext_resource path="res://Deniz/Model/book_shelf.glb" type="PackedScene" id=37]
+[ext_resource path="res://Deniz/Model/r_flask.glb" type="PackedScene" id=38]
+[ext_resource path="res://Deniz/Model/open_book.glb" type="PackedScene" id=39]
+[ext_resource path="res://Deniz/Model/ringgit.glb" type="PackedScene" id=40]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 80, 80 )
@@ -38,48 +51,210 @@ albedo_texture = ExtResource( 1 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 43.8722, 0.663868, 46.2288 )
 
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 14.0611, 6.29263, 0.841606 )
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.001, 6.29263, 0.841606 )
+
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 1.09119, 4.53037, 11.9497 )
 
-[sub_resource type="SpatialMaterial" id=6]
-albedo_texture = ExtResource( 5 )
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 6 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 1, 3.90279, 12.2642 )
 
-[sub_resource type="SpatialMaterial" id=8]
-albedo_texture = ExtResource( 5 )
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 6 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 11.5662, 4.43666, 1 )
 
-[sub_resource type="SpatialMaterial" id=10]
-albedo_texture = ExtResource( 5 )
-
 [sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 6 )
 
 [sub_resource type="SpatialMaterial" id=12]
 albedo_color = Color( 0.580392, 0.458824, 0.458824, 1 )
 
 [sub_resource type="SpatialMaterial" id=13]
-albedo_texture = ExtResource( 24 )
+albedo_color = Color( 0.576471, 0.572549, 0.572549, 1 )
 
 [node name="Level" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0, 0 )
 
 [node name="Floor" type="StaticBody" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.08245 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555767, 0.0295519, 2.17201 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.637193, 0.0295519, 2.16969 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="shelf" type="MeshInstance" parent="Floor/MeshInstance"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.28115, 1.58208, 5.7002 )
-mesh = ExtResource( 2 )
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.789663, -0.139728, -0.597418, -0.568545, -0.19937, 0.798128, -0.230628, 0.969911, 0.0779935, 2.58485, 4.43381, -4.94784 )
+light_color = Color( 0.745098, 0.745098, 0.745098, 1 )
+light_energy = 2.96
+light_indirect_energy = 0.0
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.5, 0, -7.54979e-008, 0, 0.85, 0, 7.54979e-008, 0, -0.5, 3.70974e-007, 3, -18.6247 )
+
+[node name="Wall1anddoor" type="StaticBody" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.2992 )
+
+[node name="wall1" type="MeshInstance" parent="Wall1anddoor"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.426705, 2.76764, -5.1798 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 4 )
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall1anddoor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.58525, 0, -3.35496 )
+shape = SubResource( 5 )
+
+[node name="Wall2" type="StaticBody" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.22216, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20511, 0, -1.50588 )
+shape = SubResource( 6 )
+
+[node name="wallleftright" type="MeshInstance" parent="Wall2"]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -4.31964, 0.682136, -0.934176 )
+mesh = ExtResource( 5 )
+material/0 = SubResource( 7 )
+
+[node name="Wall3" type="StaticBody" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1537, 1.19698, -1.83505 )
+shape = SubResource( 8 )
+
+[node name="wallleftright" type="MeshInstance" parent="Wall3"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 10.0479, 0.668556, -0.778367 )
+mesh = ExtResource( 5 )
+material/0 = SubResource( 9 )
+
+[node name="Wall4" type="StaticBody" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423436, 0, 9.28071 )
+shape = SubResource( 10 )
+
+[node name="wallfront" type="MeshInstance" parent="Wall4"]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.254437, 0.740523, 8.74343 )
+mesh = ExtResource( 7 )
+material/0 = SubResource( 11 )
+
+[node name="microscope" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 1.72963, 0.863799, 0.484411 )
+mesh = ExtResource( 8 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+script = ExtResource( 9 )
+
+[node name="container" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5129, 1.70482, -4.5476 )
+mesh = ExtResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="container2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5129, 1.70482, -4.97212 )
+mesh = ExtResource( 10 )
+material/0 = SubResource( 12 )
+
+[node name="lab_bench" parent="." instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.751842, -0.69517, 7.61023 )
+
+[node name="sink" parent="." instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 9.04886, 0.63, -7.82726 )
+
+[node name="container3" parent="." instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 6.18109, 0.0342013, 7.27115 )
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( 0.965695, 0.226458, -0.127082, 0.248256, -0.66156, 0.707607, 0.0761712, -0.714881, -0.695085, -3.01276, 7.61453, -13.5382 )
+
+[node name="lab_chair" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.274708, 0.320095, -5.98908 )
+
+[node name="lab_chair2" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86491, 0.320095, 0.824112 )
+
+[node name="lab_chair3" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69383, 0.320095, 0.824112 )
+
+[node name="DirectionalLight3" type="DirectionalLight" parent="."]
+transform = Transform( 0.878105, 0.296828, 0.375266, -0.478468, 0.544752, 0.688705, 0, -0.784308, 0.620372, 0, 3.46342, 3.50669 )
+
+[node name="pc" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -1.75768, 1.77558, 7.93839 )
+
+[node name="certifuge" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 8.89534, 1.63715, -6.80593 )
+script = ExtResource( 17 )
+
+[node name="bin" parent="." instance=ExtResource( 18 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 9.01089, 0.26309, -4.7217 )
+
+[node name="testtube" parent="." instance=ExtResource( 19 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.863524, 1.6026, 7.0353 )
+
+[node name="testtube2" parent="." instance=ExtResource( 19 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.095701, 1.5081, 7.08704 )
+
+[node name="testtube3" parent="." instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55811, 1.62345, -0.871716 )
+
+[node name="water" parent="." instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83851, 0.667164, 2.2658 )
+
+[node name="Floor2" parent="." instance=ExtResource( 22 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.42274, -0.0636606, -17.5191 )
+
+[node name="Middle_Table" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289956, -0.328958, -2.0142 )
+
+[node name="Container_1" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48158, 3.05004, 2.04867 )
+
+[node name="Container_2" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47973, 3.13004, -0.609594 )
+
+[node name="Container_3" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47973, 3.13004, -3.55459 )
+
+[node name="Big_Bench" parent="." instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41979, 0.913911, -0.762383 )
+
+[node name="lab_chair_3" parent="." instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -2.06702, 0.321247, 6.91672 )
+
+[node name="Fire_Ex" parent="." instance=ExtResource( 27 )]
+transform = Transform( -0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, -9.02848, 2.20828, 8.24316 )
+
+[node name="shelf" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.50563, 1.17155, -4.55871 )
+mesh = ExtResource( 28 )
 material/0 = null
 material/1 = null
 material/2 = null
@@ -91,166 +266,54 @@ material/7 = null
 material/8 = null
 material/9 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Floor"]
-shape = SubResource( 3 )
+[node name="Fire_Ex_3" parent="." instance=ExtResource( 27 )]
+transform = Transform( -0.766045, 0, -0.642787, 0, 1, 0, 0.642787, 0, -0.766045, 5.71302, 1.41064, -11.5117 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -0.789663, -0.139728, -0.597418, -0.568545, -0.19937, 0.798128, -0.230628, 0.969911, 0.0779931, 2.58485, 4.43381, -4.94784 )
-light_color = Color( 0.745098, 0.745098, 0.745098, 1 )
-light_energy = 2.96
-light_indirect_energy = 0.0
+[node name="Clock" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1.91069e-015, 4.37114e-008, -1, 1, -4.37114e-008, 0, -4.37114e-008, -1, -4.37114e-008, -1.19111, 4.09365, 8.47868 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.5, 0, -7.54979e-008, 0, 0.7, 0, 7.54979e-008, 0, -0.5, 0, 3, -14.3813 )
+[node name="Labtop_1" parent="." instance=ExtResource( 30 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.114693, 1.61165, -5.42709 )
 
-[node name="Wall1anddoor" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.2992 )
+[node name="Labtop_2" parent="." instance=ExtResource( 30 )]
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -1.21907, 1.66185, 1.08373 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Wall1anddoor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.693968, 0, -3.35496 )
-shape = SubResource( 4 )
+[node name="Emergency_cit" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.22065, 1.68573, -10.4238 )
 
-[node name="Wall2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.22216, 0, 0 )
+[node name="Board" parent="." instance=ExtResource( 32 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 10.71, 1.351, 1.351 )
+script = ExtResource( 33 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Wall2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20511, 0, -1.50588 )
-shape = SubResource( 5 )
-
-[node name="wallleftright" type="MeshInstance" parent="Wall2"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -4.31964, 0.682136, -0.934176 )
-mesh = ExtResource( 4 )
-material/0 = SubResource( 6 )
-
-[node name="Wall3" type="StaticBody" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="Wall3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1537, 1.19698, -1.83505 )
-shape = SubResource( 7 )
-
-[node name="wallleftright" type="MeshInstance" parent="Wall3"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 10.0479, 0.668556, -0.778367 )
-mesh = ExtResource( 4 )
-material/0 = SubResource( 8 )
-
-[node name="Wall4" type="StaticBody" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="Wall4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423436, 0, 9.28071 )
-shape = SubResource( 9 )
-
-[node name="wallfront" type="MeshInstance" parent="Wall4"]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.254437, 0.740523, 8.74343 )
-mesh = ExtResource( 6 )
-material/0 = SubResource( 10 )
-
-[node name="top" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202867, 4.10409, -18.0883 )
-mesh = ExtResource( 7 )
-material/0 = SubResource( 11 )
-
-[node name="microscope" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.336152, 0.666108, -5.39107 )
-mesh = ExtResource( 8 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
-material/6 = null
-material/7 = null
-material/8 = null
-
-[node name="container" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31016, 2.27591, 4.69645 )
-mesh = ExtResource( 9 )
-material/0 = SubResource( 12 )
-
-[node name="container2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31016, 2.27591, 4.27193 )
-mesh = ExtResource( 9 )
-material/0 = SubResource( 12 )
-
-[node name="flask" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.999959, 0, 0.0090945, 0, 1, 0, -0.0090945, 0, -0.999959, -8.53799, 1.77844, -5.58016 )
+[node name="microscope2" type="MeshInstance" parent="."]
+transform = Transform( -1, -8.74228e-008, -3.82137e-015, 0, -4.37114e-008, 1, -8.74228e-008, 1, 4.37114e-008, 0.839926, 1.89768, 1.46189 )
 visible = false
-
-[node name="lab_bench" parent="." instance=ExtResource( 11 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -0.751842, -0.69517, 7.61023 )
-
-[node name="cabinet" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 8.39361, 2.32205, -0.819354 )
-visible = false
-
-[node name="cabinet2" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 8.39361, 2.32205, 2.65873 )
-visible = false
-
-[node name="lab_bench2" parent="." instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 18.9066, 0.207, -2.41 )
-
-[node name="sink" parent="." instance=ExtResource( 14 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 9.04886, 0.63, -7.82726 )
-
-[node name="container3" parent="." instance=ExtResource( 15 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 8.65288, 0.0342008, -1.57677 )
-
-[node name="DirectionalLight2" type="DirectionalLight" parent="."]
-transform = Transform( 0.965695, 0.226458, -0.127082, 0.248256, -0.66156, 0.707607, 0.0761712, -0.714881, -0.695085, -3.01276, 7.61453, -13.5382 )
-
-[node name="lab_chair" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.274708, 0.320095, -5.98908 )
-
-[node name="lab_chair2" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86491, 0.320095, 0.824112 )
-
-[node name="DirectionalLight3" type="DirectionalLight" parent="."]
-transform = Transform( 0.878105, 0.296828, 0.375266, -0.478468, 0.544752, 0.688704, 0, -0.784308, 0.620372, 0, 3.46342, 3.50669 )
-
-[node name="pc" parent="." instance=ExtResource( 17 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -1.75768, 1.77558, 7.93839 )
-
-[node name="certifuge" parent="." instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 8.89534, 1.63715, -6.80593 )
-
-[node name="bin" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 5.98885, 0.521768, 7.64609 )
-
-[node name="testtube" parent="." instance=ExtResource( 20 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.863524, 1.6026, 7.0353 )
-
-[node name="testtube2" parent="." instance=ExtResource( 20 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0.095701, 1.5081, 7.08704 )
-
-[node name="testtube3" parent="." instance=ExtResource( 21 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.796745, 1.62345, -5.12623 )
-
-[node name="water" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83851, 0.667164, 2.2658 )
-
-[node name="wall1" type="MeshInstance" parent="."]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0.418663, 2.76764, -10.4803 )
-mesh = ExtResource( 23 )
+mesh = ExtResource( 34 )
 material/0 = SubResource( 13 )
-material/1 = null
-material/2 = null
-material/3 = null
 
-[node name="Scene Root" parent="." instance=ExtResource( 25 )]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.42274, -0.0636606, -17.5191 )
+[node name="Scene Root14" parent="." instance=ExtResource( 35 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14638, 2.99315, -10.3145 )
 
-[node name="Scene Root2" parent="." instance=ExtResource( 26 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289956, -0.328958, -2.0142 )
+[node name="Scene Root15" parent="." instance=ExtResource( 36 )]
+transform = Transform( -1, -8.74228e-008, 0, -3.82137e-015, 4.37114e-008, 1, -8.74228e-008, 1, -4.37114e-008, 0.281843, 1.89954, 1.52488 )
+visible = false
 
-[node name="Scene Root3" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47973, 3.13004, 2.11379 )
+[node name="Camera_Board" type="Camera" parent="."]
+pause_mode = 2
+transform = Transform( -4.37114e-008, 8.74228e-008, -1, 0, -1, -8.74228e-008, -1, -3.82137e-015, 4.37114e-008, 6.61499, 2.59956, 1.73776 )
 
-[node name="Scene Root5" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47973, 3.13004, -0.609594 )
+[node name="Micro_Camera" type="Camera" parent="."]
+transform = Transform( -1.93051e-008, -0.581028, 0.813883, -7.61927e-008, 0.813883, 0.581028, -1, -5.07951e-008, -5.99822e-008, 2.92974, 3.54013, 0.466176 )
+fov = 65.8982
 
-[node name="Scene Root6" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47973, 3.13004, -3.55459 )
+[node name="Book_shelf" parent="." instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15742, 3.24821, -2.98946 )
 
-[node name="Scene Root4" parent="." instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41979, 0.913911, -0.762383 )
+[node name="Flasks" parent="." instance=ExtResource( 38 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -8.41669, 1.85779, -6.24547 )
+
+[node name="Open_book" parent="." instance=ExtResource( 39 )]
+transform = Transform( 0.79554, 0, 0.605901, 0, 1, 0, -0.605901, 0, 0.79554, 1.4273, 1.73127, -4.86928 )
+
+[node name="Ringgit" parent="." instance=ExtResource( 40 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.872968, 1.48825, 1.54261 )
