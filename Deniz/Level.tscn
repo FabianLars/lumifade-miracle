@@ -85,7 +85,6 @@ albedo_color = Color( 0.576471, 0.572549, 0.572549, 1 )
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0, 0 )
 
 [node name="Floor" type="StaticBody" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.08245 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
@@ -135,7 +134,6 @@ mesh = ExtResource( 5 )
 material/0 = SubResource( 7 )
 
 [node name="Wall3" type="StaticBody" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1537, 1.19698, -1.83505 )
@@ -307,7 +305,7 @@ transform = Transform( -1.93051e-008, -0.581028, 0.813883, -7.61927e-008, 0.8138
 fov = 65.8982
 
 [node name="Book_shelf" parent="." instance=ExtResource( 37 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -4.66728, 3.70889, 7.9621 )
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -4.66728, 3.55336, 7.9621 )
 
 [node name="Flasks" parent="." instance=ExtResource( 38 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -8.41669, 1.85779, -6.24547 )
