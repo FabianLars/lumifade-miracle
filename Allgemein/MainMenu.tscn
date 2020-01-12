@@ -64,7 +64,6 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="StartMenu" type="VBoxContainer" parent="MenuContainer"]
-editor/display_folded = true
 margin_right = 390.0
 margin_bottom = 440.0
 size_flags_horizontal = 3
