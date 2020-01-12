@@ -23,6 +23,11 @@ config/icon="res://icon.png"
 
 Global="*res://Allgemein/Global.gd"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [input]
 
 ui_left={
@@ -116,6 +121,11 @@ Key2={
 ui_E={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_Z={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
  ]
 }
 

@@ -6,6 +6,9 @@ const MAIN_MENU_PATH = "res://Allgemein/MainMenu.tscn"
 const POPUP_SCENE = preload("res://Allgemein/PauseMenu.tscn")
 var popup = null
 
+const OVERLAY_SCENE = preload("res://Allgemein/Overlay.tscn")
+var overlay = null
+
 var canvas_layer = null
 
 const DEBUG_DISPLAY_SCENE = preload("res://Allgemein/DebugDisplay.tscn")
@@ -21,6 +24,7 @@ func _ready():
 
 func goto_scene(path):
     get_tree().change_scene(path)
+    set_overlay(false)
 
 func _process(delta):
     if Input.is_action_just_pressed("ui_cancel") and get_tree().get_current_scene().name != "MainMenuContainer":
@@ -29,6 +33,7 @@ func _process(delta):
             popup.get_node("Button_quit").connect("pressed", self, "popup_quit")
             popup.connect("popup_hide", self, "popup_closed")
             popup.get_node("Button_resume").connect("pressed", self, "popup_closed")
+            popup.get_node("Button_hub").connect("pressed", self, "popup_hub")
 
             canvas_layer.add_child(popup)
             popup.popup_centered()
@@ -39,6 +44,13 @@ func _process(delta):
 
 func popup_closed():
     get_tree().paused = false
+    if popup != null:
+        popup.queue_free()
+        popup = null
+
+func popup_hub():
+    get_tree().paused = false
+    goto_scene("res://MainHub/Level.tscn")
     if popup != null:
         popup.queue_free()
         popup = null
@@ -85,3 +97,13 @@ func load_game():
             player_rota_cam = Vector3(current_line["rota_cam"], 0, 0)
             goto_scene(current_line["level"])
     save_game.close()
+
+func set_overlay(overlay_on):
+    if overlay_on == false:
+        if overlay != null:
+            overlay.queue_free()
+            overlay = null
+    else:
+        if overlay == null:
+            overlay = OVERLAY_SCENE.instance()
+            canvas_layer.add_child(overlay)
