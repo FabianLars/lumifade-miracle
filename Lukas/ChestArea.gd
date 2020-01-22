@@ -27,7 +27,7 @@ func _process(delta):
 			
 			elif doorOpen == true:
 				$rotAchse.rotate_x(rad2deg(-90))
-				$doorText.set_text("[ E ] Truhe öffnen")
+				$chestText.set_text("[ E ] Truhe öffnen")
 				doorOpen = false
 				
 	if camera_change.length() > 0 && areaEntered:

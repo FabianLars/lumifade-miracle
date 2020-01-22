@@ -14,6 +14,9 @@ var canvas_layer = null
 const DEBUG_DISPLAY_SCENE = preload("res://Allgemein/DebugDisplay.tscn")
 var debug_display = null
 
+var menumusic = true
+var debugdisplay = false
+
 var player_pos = null
 var player_rota_head = null
 var player_rota_cam
@@ -21,10 +24,12 @@ var player_rota_cam
 func _ready():
     canvas_layer = CanvasLayer.new()
     add_child(canvas_layer)
+    load_settings()
 
 func goto_scene(path):
     get_tree().change_scene(path)
     set_overlay(false)
+    load_settings()
 
 func _process(delta):
     if Input.is_action_just_pressed("ui_cancel") and get_tree().get_current_scene().name != "MainMenuContainer":
@@ -41,6 +46,9 @@ func _process(delta):
             Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
             get_tree().paused = true
+
+func set_global_vol(val):
+    AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear2db(val))
 
 func popup_closed():
     get_tree().paused = false
@@ -65,6 +73,7 @@ func popup_quit():
         goto_scene(MAIN_MENU_PATH)
 
 func set_debug_display(display_on):
+    debugdisplay = display_on
     if display_on == false:
         if debug_display != null:
             debug_display.queue_free()
@@ -97,6 +106,39 @@ func load_game():
             player_rota_cam = Vector3(current_line["rota_cam"], 0, 0)
             goto_scene(current_line["level"])
     save_game.close()
+    
+func save_settings():
+    var settings_file = File.new()
+    settings_file.open("user://settings.json", File.WRITE)
+    var settings_nodes = get_tree().get_nodes_in_group("Settings")
+    for i in settings_nodes:
+        var node_data = i.call("save_settings_to_file");
+        settings_file.store_line(to_json(node_data))
+    settings_file.close()
+    
+func load_settings():
+    var settings_file = File.new()
+    if not settings_file.file_exists("user://settings.json"):
+        return
+    settings_file.open("user://settings.json", File.READ)
+    while not settings_file.eof_reached():
+        var current_line = parse_json(settings_file.get_line())
+        if current_line != null:
+            if current_line.has("volume_slider"):
+                set_global_vol(current_line["volume_slider"])
+            if current_line.has("menumusic"):
+                menumusic = current_line["menumusic"]
+            if current_line.has("fullscreen"):
+                OS.window_fullscreen = current_line["fullscreen"]
+            if current_line.has("debug"):
+                set_debug_display(current_line["debug"])
+    settings_file.close()
+    var settings_nodes = get_tree().get_nodes_in_group("Settings")
+    for i in settings_nodes:
+        var node_data = i.call("load_settings");
+                
+                
+            
 
 func set_overlay(overlay_on):
     if overlay_on == false:
