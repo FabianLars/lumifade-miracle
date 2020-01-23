@@ -27,6 +27,7 @@ Global="*res://Allgemein/Global.gd"
 
 window/size/width=1280
 window/size/height=720
+window/dpi/allow_hidpi=true
 
 [input]
 
