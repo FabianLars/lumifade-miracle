@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=2]
+[gd_scene load_steps=111 format=2]
 
 [ext_resource path="res://Deniz/Model/floor.png" type="Texture" id=1]
 [ext_resource path="res://Allgemein/Character.tscn" type="PackedScene" id=2]
@@ -47,19 +47,23 @@
 [ext_resource path="res://Deniz/Model/cup_pencil.glb" type="PackedScene" id=45]
 [ext_resource path="res://Deniz/Model/plant.glb" type="PackedScene" id=46]
 [ext_resource path="res://Deniz/Model/big_container.glb" type="PackedScene" id=47]
-[ext_resource path="res://Deniz/Model/small_container.glb" type="PackedScene" id=48]
-[ext_resource path="res://Deniz/Model/tubes.glb" type="PackedScene" id=49]
-[ext_resource path="res://Deniz/start_message.gd" type="Script" id=50]
-[ext_resource path="res://hiclipart.com.png" type="Texture" id=51]
-[ext_resource path="res://Allgemein/Titillium-Regular.otf" type="DynamicFontData" id=52]
-[ext_resource path="res://Deniz/Model/message.png" type="Texture" id=53]
-[ext_resource path="res://Deniz/Model/message2.png" type="Texture" id=54]
-[ext_resource path="res://send_button.png" type="Texture" id=55]
+[ext_resource path="res://Deniz/Model/tubes.glb" type="PackedScene" id=48]
+[ext_resource path="res://Deniz/start_message.gd" type="Script" id=49]
+[ext_resource path="res://Deniz/Model/hiclipart.com.png" type="Texture" id=50]
+[ext_resource path="res://Allgemein/Titillium-Regular.otf" type="DynamicFontData" id=51]
+[ext_resource path="res://Deniz/Model/message.png" type="Texture" id=52]
+[ext_resource path="res://Deniz/Model/message2.png" type="Texture" id=53]
+[ext_resource path="res://Deniz/Model/send_button.png" type="Texture" id=54]
+[ext_resource path="res://Deniz/message.gd" type="Script" id=55]
 [ext_resource path="res://Deniz/Model/book_stack.glb" type="PackedScene" id=56]
 [ext_resource path="res://Deniz/Model/prof_book.glb" type="PackedScene" id=57]
 [ext_resource path="res://Deniz/Model/prof_book.gd" type="Script" id=58]
 [ext_resource path="res://Deniz/Model/artikel_laptop.glb" type="PackedScene" id=59]
 [ext_resource path="res://Deniz/Model/artikel_laptop.gd" type="Script" id=60]
+[ext_resource path="res://Deniz/Model/prof_pic.glb" type="PackedScene" id=61]
+[ext_resource path="res://Deniz/Model/riddle4.glb" type="PackedScene" id=62]
+[ext_resource path="res://Deniz/Model/riddle4.gd" type="Script" id=63]
+[ext_resource path="res://Deniz/Model/small_container.glb" type="PackedScene" id=64]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 80, 80 )
@@ -125,15 +129,15 @@ albedo_color = Color( 0.564706, 0.564706, 0.564706, 1 )
 [sub_resource type="SpatialMaterial" id=21]
 albedo_color = Color( 0.580392, 0.458824, 0.458824, 1 )
 
-[sub_resource type="SpatialMaterial" id=22]
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 1, 6.74427, 12.4236 )
+
+[sub_resource type="SpatialMaterial" id=23]
 albedo_color = Color( 0.576471, 0.572549, 0.572549, 1 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=24]
 size = 100
-font_data = ExtResource( 52 )
-
-[sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 51 )
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0, 0, 0, 1 )
@@ -142,48 +146,67 @@ bg_color = Color( 0, 0, 0, 1 )
 bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=27]
-
-[sub_resource type="StyleBoxFlat" id=28]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=29]
+[sub_resource type="StyleBoxFlat" id=28]
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=30]
 
 [sub_resource type="StyleBoxEmpty" id=31]
 
-[sub_resource type="StyleBoxFlat" id=32]
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxFlat" id=33]
 bg_color = Color( 0.658824, 0.658824, 0.658824, 1 )
 
-[sub_resource type="DynamicFont" id=33]
-size = 23
-font_data = ExtResource( 52 )
-
 [sub_resource type="DynamicFont" id=34]
-size = 18
-font_data = ExtResource( 52 )
+size = 23
+font_data = ExtResource( 51 )
 
-[sub_resource type="StyleBoxFlat" id=35]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFont" id=35]
+size = 18
+font_data = ExtResource( 51 )
 
 [sub_resource type="DynamicFont" id=36]
-size = 27
-font_data = ExtResource( 52 )
+font_data = ExtResource( 51 )
 
-[sub_resource type="StyleBoxFlat" id=37]
+[sub_resource type="DynamicFont" id=37]
+font_data = ExtResource( 51 )
+
+[sub_resource type="StyleBoxFlat" id=38]
 bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="DynamicFont" id=38]
-size = 25
-font_data = ExtResource( 52 )
 
 [sub_resource type="DynamicFont" id=39]
 size = 27
-font_data = ExtResource( 52 )
+font_data = ExtResource( 51 )
 
-[sub_resource type="DynamicFont" id=40]
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 25
+font_data = ExtResource( 51 )
+
+[sub_resource type="DynamicFont" id=42]
 size = 27
-font_data = ExtResource( 52 )
+font_data = ExtResource( 51 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 27
+font_data = ExtResource( 51 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 26
+font_data = ExtResource( 51 )
+
+[sub_resource type="StyleBoxFlat" id=45]
+
+[sub_resource type="DynamicFont" id=46]
+size = 79
+font_data = ExtResource( 51 )
 
 [node name="Level" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0, 0 )
@@ -333,8 +356,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55811, 1.62345, -0.871716 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34522, 0.667164, 2.2658 )
 
 [node name="Floor2" parent="." instance=ExtResource( 22 )]
+editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.42274, -0.0636606, -17.5284 )
 script = ExtResource( 23 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.27771, 0.0636606, 0.0599985 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Floor2"]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.27771, 0.0636606, -10.3455 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Floor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3416, 0.0636606, -5.36427 )
+shape = SubResource( 22 )
 
 [node name="Middle_Table" parent="." instance=ExtResource( 24 )]
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.289956, -0.328958, -2.0142 )
@@ -395,7 +431,7 @@ script = ExtResource( 34 )
 transform = Transform( -1, -8.74228e-008, -3.82137e-015, 0, -4.37114e-008, 1, -8.74228e-008, 1, 4.37114e-008, 0.839926, 1.89768, 1.46189 )
 visible = false
 mesh = ExtResource( 35 )
-material/0 = SubResource( 22 )
+material/0 = SubResource( 23 )
 
 [node name="Scene Root14" parent="." instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14638, 2.99315, -10.5167 )
@@ -417,7 +453,7 @@ fov = 65.8982
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -4.66728, 3.55336, 7.9621 )
 
 [node name="Open_book" parent="." instance=ExtResource( 39 )]
-transform = Transform( -0.668095, 0, -0.744076, 0, 1, 0, 0.744076, 0, -0.668095, 1.28231, 1.73127, -4.99305 )
+transform = Transform( -0.668095, 0, -0.744076, 0, 1, 0, 0.744076, 0, -0.668095, 1.28231, 1.63429, -4.99305 )
 script = ExtResource( 40 )
 
 [node name="Ringgit" parent="." instance=ExtResource( 41 )]
@@ -445,19 +481,16 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 9.644
 [node name="container4" parent="." instance=ExtResource( 47 )]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 6.88913, 0.242752, 7.68426 )
 
-[node name="container5" parent="." instance=ExtResource( 48 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.88487, 3.88286, -0.66821 )
-
-[node name="experiment_mat_4" parent="." instance=ExtResource( 49 )]
+[node name="experiment_mat_4" parent="." instance=ExtResource( 48 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.19062, 2.01258, 3.44334 )
 
 [node name="start_message" type="Control" parent="."]
 editor/display_folded = true
-margin_left = 42.0
+margin_left = 40.6128
 margin_top = 16.0
-margin_right = 1224.0
+margin_right = 1222.61
 margin_bottom = 702.0
-script = ExtResource( 50 )
+script = ExtResource( 49 )
 
 [node name="ColorRect" type="ColorRect" parent="start_message"]
 pause_mode = 2
@@ -482,7 +515,7 @@ margin_top = 9.2111
 margin_right = 948.308
 margin_bottom = 989.211
 rect_scale = Vector2( 0.0032561, 0.0251971 )
-texture = ExtResource( 51 )
+texture = ExtResource( 50 )
 
 [node name="Label" type="Label" parent="start_message/ColorRect/ColorRect"]
 margin_left = 5.95947
@@ -490,7 +523,7 @@ margin_top = 12.8916
 margin_right = 573.959
 margin_bottom = 112.892
 rect_scale = Vector2( 0.0241076, 0.190951 )
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 24 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Frau Albrecht"
 
@@ -500,7 +533,7 @@ margin_top = 130.173
 margin_right = 2341.47
 margin_bottom = 1210.17
 rect_scale = Vector2( 0.0996409, 0.12533 )
-texture = ExtResource( 53 )
+texture = ExtResource( 52 )
 
 [node name="TextureRect2" type="TextureRect" parent="start_message"]
 margin_left = 699.391
@@ -508,7 +541,7 @@ margin_top = 308.301
 margin_right = 2619.39
 margin_bottom = 1388.3
 rect_scale = Vector2( 0.0291627, 0.0414899 )
-texture = ExtResource( 54 )
+texture = ExtResource( 53 )
 
 [node name="Label" type="Label" parent="start_message"]
 margin_left = 438.98
@@ -528,11 +561,11 @@ margin_left = 802.709
 margin_top = 60.7599
 margin_right = 897.709
 margin_bottom = 92.7599
-custom_styles/hover = SubResource( 24 )
-custom_styles/pressed = SubResource( 25 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/disabled = SubResource( 27 )
-custom_styles/normal = SubResource( 28 )
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
 text = "Weiter"
 
 [node name="Label2" type="Label" parent="start_message"]
@@ -549,10 +582,10 @@ margin_top = 583.066
 margin_right = 1211.94
 margin_bottom = 1095.07
 rect_scale = Vector2( 0.0657708, 0.0707338 )
-custom_styles/hover = SubResource( 29 )
-custom_styles/pressed = SubResource( 30 )
-custom_styles/normal = SubResource( 31 )
-icon = ExtResource( 55 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+icon = ExtResource( 54 )
 
 [node name="LineEdit" type="LineEdit" parent="start_message"]
 margin_left = 477.854
@@ -560,8 +593,8 @@ margin_top = 582.708
 margin_right = 700.854
 margin_bottom = 637.708
 rect_scale = Vector2( 0.887413, 0.707148 )
-custom_styles/normal = SubResource( 32 )
-custom_fonts/font = SubResource( 33 )
+custom_styles/normal = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 
 [node name="ColorRect2" type="ColorRect" parent="start_message"]
@@ -579,7 +612,7 @@ margin_left = 423.791
 margin_top = 98.164
 margin_right = 843.792
 margin_bottom = 425.164
-custom_fonts/font = SubResource( 34 )
+custom_fonts/font = SubResource( 35 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Verehrter Spieler. Hier ist der Gamemaster. 
 Ich bin hier um dir das Spiel zuerklären 
@@ -597,10 +630,181 @@ Sei wachsam
 
  "
 
+[node name="message" type="Control" parent="."]
+visible = false
+margin_left = 40.6128
+margin_top = 16.0
+margin_right = 1222.61
+margin_bottom = 702.0
+script = ExtResource( 55 )
+
+[node name="ColorRect" type="ColorRect" parent="message"]
+pause_mode = 2
+margin_left = 414.216
+margin_top = 47.9344
+margin_right = 498.216
+margin_bottom = 108.934
+rect_scale = Vector2( 4.22896, 10.1503 )
+color = Color( 0.74902, 0.74902, 0.74902, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="message/ColorRect"]
+pause_mode = 2
+margin_top = 0.124395
+margin_right = 40.0
+margin_bottom = 40.1244
+rect_scale = Vector2( 2.09969, 0.134155 )
+color = Color( 0.658824, 0.658824, 0.658824, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="message/ColorRect/ColorRect"]
+margin_left = 34.3082
+margin_top = 9.2111
+margin_right = 948.308
+margin_bottom = 989.211
+rect_scale = Vector2( 0.0032561, 0.0251971 )
+texture = ExtResource( 50 )
+
+[node name="Label" type="Label" parent="message/ColorRect/ColorRect"]
+margin_left = 5.95947
+margin_top = 12.8916
+margin_right = 573.959
+margin_bottom = 112.892
+rect_scale = Vector2( 0.0241076, 0.190951 )
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Frau Albrecht"
+
+[node name="Button" type="Button" parent="message"]
+margin_left = 802.709
+margin_top = 60.7599
+margin_right = 897.709
+margin_bottom = 92.7599
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 27 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+text = "Weiter"
+
+[node name="Button2" type="Button" parent="message"]
+margin_left = 699.935
+margin_top = 583.066
+margin_right = 1211.94
+margin_bottom = 1095.07
+rect_scale = Vector2( 0.0657708, 0.0707338 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+icon = ExtResource( 54 )
+
+[node name="LineEdit" type="LineEdit" parent="message"]
+margin_left = 477.854
+margin_top = 582.708
+margin_right = 700.854
+margin_bottom = 637.708
+rect_scale = Vector2( 0.887413, 0.707148 )
+custom_styles/normal = SubResource( 33 )
+custom_fonts/font = SubResource( 34 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+max_length = 10
+
+[node name="TextureRect" type="TextureRect" parent="message"]
+visible = false
+margin_left = 425.914
+margin_top = 215.354
+margin_right = 2345.91
+margin_bottom = 1295.35
+rect_scale = Vector2( 0.0903123, 0.0481311 )
+texture = ExtResource( 52 )
+
+[node name="TextureRect3" type="TextureRect" parent="message"]
+visible = false
+margin_left = 422.855
+margin_top = 370.351
+margin_right = 2342.85
+margin_bottom = 1450.35
+rect_scale = Vector2( 0.0903123, 0.0481311 )
+texture = ExtResource( 52 )
+
+[node name="TextureRect5" type="TextureRect" parent="message"]
+visible = false
+margin_left = 423.0
+margin_top = 370.0
+margin_right = 2343.0
+margin_bottom = 1450.0
+rect_scale = Vector2( 0.0406087, 0.0431685 )
+texture = ExtResource( 52 )
+
+[node name="TextureRect2" type="TextureRect" parent="message"]
+visible = false
+margin_left = 637.0
+margin_top = 150.0
+margin_right = 2800.0
+margin_bottom = 1230.0
+rect_scale = Vector2( 0.0658618, 0.0450039 )
+texture = ExtResource( 53 )
+
+[node name="TextureRect4" type="TextureRect" parent="message"]
+visible = false
+margin_left = 634.961
+margin_top = 277.464
+margin_right = 2797.96
+margin_bottom = 1357.46
+rect_scale = Vector2( 0.0658618, 0.0450039 )
+texture = ExtResource( 53 )
+
+[node name="Label" type="Label" parent="message"]
+visible = false
+margin_left = 444.412
+margin_top = 233.802
+margin_right = 587.412
+margin_bottom = 249.802
+custom_fonts/font = SubResource( 36 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ich denke eher nicht "
+
+[node name="Label3" type="Label" parent="message"]
+visible = false
+margin_left = 441.353
+margin_top = 388.799
+margin_right = 584.353
+margin_bottom = 404.799
+custom_fonts/font = SubResource( 36 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ich denke eher nicht "
+
+[node name="Label5" type="Label" parent="message"]
+visible = false
+margin_left = 441.353
+margin_top = 388.799
+margin_right = 584.353
+margin_bottom = 404.799
+custom_fonts/font = SubResource( 36 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Danke "
+
+[node name="Label2" type="Label" parent="message"]
+visible = false
+margin_left = 666.887
+margin_top = 168.973
+margin_right = 706.887
+margin_bottom = 184.973
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Label4" type="Label" parent="message"]
+visible = false
+margin_left = 664.847
+margin_top = 296.437
+margin_right = 704.847
+margin_bottom = 312.437
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
 [node name="Scene Root" parent="." instance=ExtResource( 56 )]
 transform = Transform( 0.944948, 0, 0.327221, 0, 1, 0, -0.327221, 0, 0.944948, 0.227958, 2.00734, -1.12521 )
 
 [node name="Control_Board" type="Control" parent="."]
+editor/display_folded = true
 visible = false
 margin_left = 294.0
 margin_top = 38.0
@@ -612,8 +816,8 @@ margin_left = 5.25128
 margin_top = 27.8042
 margin_right = 228.251
 margin_bottom = 55.8042
-custom_styles/normal = SubResource( 35 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/normal = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
 text = "Welche Zahl  fehlt ?"
 
 [node name="LineEdit" type="LineEdit" parent="Control_Board"]
@@ -621,11 +825,12 @@ margin_left = 241.832
 margin_top = 23.142
 margin_right = 323.832
 margin_bottom = 59.142
-custom_styles/normal = SubResource( 37 )
-custom_fonts/font = SubResource( 38 )
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
 editable = false
 
 [node name="Control_Artikel" type="Control" parent="."]
+editor/display_folded = true
 visible = false
 margin_left = 294.0
 margin_top = 38.0
@@ -637,8 +842,8 @@ margin_left = -36.9195
 margin_top = 26.4864
 margin_right = 238.081
 margin_bottom = 54.4864
-custom_styles/normal = SubResource( 35 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/normal = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
 text = "Gebe ein Buchstabe ein:"
 
 [node name="LineEdit" type="LineEdit" parent="Control_Artikel"]
@@ -646,25 +851,60 @@ margin_left = 241.832
 margin_top = 23.142
 margin_right = 323.832
 margin_bottom = 59.142
-custom_styles/normal = SubResource( 37 )
-custom_fonts/font = SubResource( 38 )
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
 editable = false
 
 [node name="Control_Open_book" type="Control" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 220.0
+margin_top = 38.0
+margin_right = 820.0
+margin_bottom = 121.0
+
+[node name="LineEdit" type="LineEdit" parent="Control_Open_book"]
+margin_left = 490.83
+margin_top = 14.559
+margin_right = 572.83
+margin_bottom = 50.559
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
+editable = false
+
+[node name="Label" type="Label" parent="Control_Open_book"]
+margin_left = 166.998
+margin_top = 20.9376
+margin_right = 441.999
+margin_bottom = 48.9376
+custom_styles/normal = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
+text = "Bitte gib eine Zahl ein:"
+
+[node name="Control_Riddle4" type="Control" parent="."]
 visible = false
 margin_left = 294.0
 margin_top = 38.0
 margin_right = 820.0
 margin_bottom = 139.0
 
-[node name="LineEdit" type="LineEdit" parent="Control_Open_book"]
-margin_left = 241.832
-margin_top = 23.142
-margin_right = 323.832
-margin_bottom = 59.142
-custom_styles/normal = SubResource( 37 )
-custom_fonts/font = SubResource( 38 )
+[node name="LineEdit" type="LineEdit" parent="Control_Riddle4"]
+margin_left = 269.604
+margin_top = 24.5184
+margin_right = 351.604
+margin_bottom = 60.5184
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
 editable = false
+
+[node name="Label" type="Label" parent="Control_Riddle4"]
+margin_left = -141.028
+margin_top = 26.4864
+margin_right = 249.972
+margin_bottom = 54.4864
+custom_styles/normal = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
+text = "Trage beide Fehlenden Zahlen ein:"
 
 [node name="Teilcode1" type="Label" parent="."]
 visible = false
@@ -672,17 +912,17 @@ margin_left = 83.0236
 margin_top = 56.6669
 margin_right = 196.024
 margin_bottom = 84.6669
-custom_fonts/font = SubResource( 39 )
-custom_colors/font_color = Color( 0.376471, 0.0980392, 0.0980392, 1 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Teilcodes:"
 
 [node name="Prof_book" parent="." instance=ExtResource( 57 )]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -0.674895, 1.74277, 7.52339 )
+transform = Transform( -1.19249e-008, -8.74228e-008, 1, -8.74228e-008, 1, 8.74228e-008, -1, -8.74228e-008, -1.19249e-008, 0.440646, 1.43835, 7.47325 )
 script = ExtResource( 58 )
 
 [node name="Camera_Prof_book" type="Camera" parent="."]
 pause_mode = 2
-transform = Transform( -1, 8.60946e-008, -1.51808e-008, 0, 0.173648, 0.984808, 8.74228e-008, 0.984808, -0.173648, -0.705405, 4.20921, 7.11705 )
+transform = Transform( -1, 8.60947e-008, -1.51808e-008, 0, 0.173648, 0.984808, 8.74228e-008, 0.984808, -0.173648, 0.0546822, 3.87653, 7.11705 )
 fov = 34.2441
 
 [node name="Teilcode2" type="Label" parent="."]
@@ -691,11 +931,11 @@ margin_left = 208.982
 margin_top = 57.6633
 margin_right = 248.982
 margin_bottom = 85.6633
-custom_fonts/font = SubResource( 40 )
-custom_colors/font_color = Color( 0.376471, 0.0980392, 0.0980392, 1 )
+custom_fonts/font = SubResource( 43 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 
 [node name="Artikel_laptop" parent="." instance=ExtResource( 59 )]
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -1.35749, 1.64097, -3.93901 )
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -1.35749, 1.5806, -3.93901 )
 script = ExtResource( 60 )
 
 [node name="Camera_artikel" type="Camera" parent="."]
@@ -703,5 +943,46 @@ transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -2.15
 fov = 33.9622
 
 [node name="Camera_Open_book" type="Camera" parent="."]
-transform = Transform( -0.642788, 0.766044, 3.34849e-008, 0, -4.37114e-008, 1, 0.766044, 0.642788, 2.80971e-008, 1.44514, 3.7171, -4.89613 )
+transform = Transform( -0.642788, 0.766044, 3.34849e-008, 0, -4.37114e-008, 1, 0.766044, 0.642788, 2.80972e-008, 1.44514, 3.7171, -4.89613 )
 fov = 29.4182
+
+[node name="Scene Root2" parent="." instance=ExtResource( 61 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 2.74167, 3.59394, 8.65422 )
+
+[node name="Riddle4" parent="." instance=ExtResource( 62 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 9.82076, 3.52653, -5.98382 )
+script = ExtResource( 63 )
+
+[node name="Camera_Riddle4" type="Camera" parent="."]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 8.03854, 3.82115, -6.01512 )
+
+[node name="press" type="Label" parent="."]
+visible = false
+margin_left = 565.099
+margin_top = 24.8235
+margin_right = 605.099
+margin_bottom = 38.8235
+custom_fonts/font = SubResource( 44 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Drücke Z"
+
+[node name="Scene Root3" parent="." instance=ExtResource( 64 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.56786, 3.90822, -0.906601 )
+
+[node name="ende_color" type="ColorRect" parent="."]
+visible = false
+margin_left = 207.581
+margin_top = 164.178
+margin_right = 1066.58
+margin_bottom = 455.178
+color = Color( 0.694118, 0.694118, 0.694118, 1 )
+
+[node name="ende" type="Label" parent="ende_color"]
+margin_left = 333.174
+margin_top = 111.249
+margin_right = 501.174
+margin_bottom = 181.249
+custom_styles/normal = SubResource( 45 )
+custom_fonts/font = SubResource( 46 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ENDE"

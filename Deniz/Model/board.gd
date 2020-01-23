@@ -10,7 +10,7 @@ func _ready():
 	
 	
 	
-	#b=(cam.get_global_transform().basis-get_translation()).normalized()
+
 
 	
 
@@ -19,8 +19,10 @@ func _process(delta):
 	b=(get_translation()-cam.get_global_transform().basis.z).normalized()
 	var c=a.dot(b)
 	if get_translation().distance_to(get_parent().get_node("Player").get_translation())<4:
-		if c>0.8 and c<=1.0: 
+		if acos(a.dot(b)) <= deg2rad(90):
+			get_parent().get_node("press").visible=true
 			if Input.is_action_just_pressed("ui_Z")&& get_parent().get_node("Control_Board/LineEdit").is_editable()==false:
+				get_parent().get_node("press").visible=false
 				pause_mode = Node.PAUSE_MODE_PROCESS
 				get_parent().get_node("Camera_Board").current=not get_parent().get_node("Camera_Board").current
 				if get_parent().get_node("Camera_Board").current==false:
@@ -35,7 +37,8 @@ func _process(delta):
 				get_parent().get_node("Control_Board").visible=not get_parent().get_node("Control_Board").visible
 				get_parent().get_node("Control_Board/LineEdit").set_editable(not get_parent().get_node("Control_Board/LineEdit").is_editable())
 				get_parent().get_node("Control_Board/LineEdit").connect("text_changed", self, "_on_text_changed")
-				
+		else:
+			get_parent().get_node("press").visible=false
 				
 	#	else:
 	#		pause_mode = Node.PAUSE_MODE_INHERIT
@@ -45,5 +48,5 @@ func _process(delta):
 func _on_text_changed(text):
 	if(get_parent().get_node("Control_Board/LineEdit").get_text()=="87"):
 		get_parent().get_node("Control_Board/LineEdit").set_editable(false)
-		get_parent().get_node("Teilcode2").set_text(get_parent().get_node("Teilcode2").get_text()+"87")
+		get_parent().get_node("Teilcode2").set_text(get_parent().get_node("Teilcode2").get_text()+" 87 ")
 					
