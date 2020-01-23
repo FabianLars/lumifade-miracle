@@ -10,6 +10,7 @@ func load_settings():
     $MenuContainer/OptionsMenu/HSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
     $MenuContainer/OptionsMenu/CheckDebug.pressed = Global.debugdisplay
     $MenuContainer/OptionsMenu/CheckFullscreen.pressed = OS.window_fullscreen
+    $MenuContainer/OptionsMenu/CheckVSync.pressed = OS.vsync_enabled
     $MenuContainer/OptionsMenu/CheckMenumusic.pressed = Global.menumusic
     $AudioStreamPlayer.playing = Global.menumusic
 
@@ -29,7 +30,7 @@ func main_menu_quit_game_pressed():
 
 func options_menu_button_pressed(button):
     if button == "vsync":
-        pass
+        OS.vsync_enabled = !OS.vsync_enabled
     elif button == "debug":
         Global.set_debug_display($MenuContainer/OptionsMenu/CheckDebug.pressed)
     elif button == "fullscreen":
@@ -49,6 +50,7 @@ func _on_volume_slider_changed(val):
 func save_settings_to_file():
     return {
         "volume_slider": db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))),
+        "vsync": OS.vsync_enabled,
         "debug": Global.debugdisplay,
         "fullscreen": OS.window_fullscreen,
         "menumusic": $AudioStreamPlayer.playing,

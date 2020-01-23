@@ -81,6 +81,7 @@ size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 
 [node name="MenuContainer" type="HBoxContainer" parent="MainMenuContainer"]
+editor/display_folded = true
 margin_right = 560.0
 margin_bottom = 640.0
 rect_min_size = Vector2( 560, 640 )
@@ -181,7 +182,7 @@ margin_right = 295.0
 margin_bottom = 173.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 7 )
-text = "V-Sync (tba)"
+text = "V-Sync"
 
 [node name="CheckDebug" type="CheckButton" parent="MainMenuContainer/MenuContainer/OptionsMenu"]
 margin_top = 177.0

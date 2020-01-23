@@ -132,6 +132,8 @@ func load_settings():
                 OS.window_fullscreen = current_line["fullscreen"]
             if current_line.has("debug"):
                 set_debug_display(current_line["debug"])
+            if current_line.has("vsync"):
+                OS.vsync_enabled = (current_line["vsync"])
     settings_file.close()
     var settings_nodes = get_tree().get_nodes_in_group("Settings")
     for i in settings_nodes:
