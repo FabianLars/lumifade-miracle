@@ -24,7 +24,7 @@ var teleportAvailable = false
 
 #Disk vom Translocator
 var disc_scene = preload("res://Mike/Disc.tscn")
-const DISC_SHOOT_FORCE = 250
+const DISC_SHOOT_FORCE = 125
 
 #slope variables
 const MAX_SLOPE_ANGLE = 35
@@ -33,8 +33,22 @@ const MAX_SLOPE_ANGLE = 35
 const MAX_STAIR_SLOPE = 20
 const STAIR_JUMP_HEIGHT = 6
 
+#Timer
+var timer = null
+var tp_delay = 1.5
+var can_tp = true
+
+#Grabbing objects
+var camera
+var Head
+var grabbed_object = null
+const OBJECT_THROW_FORCE = 0 
+const OBJECT_GRAB_DISTANCE = 7
+const OBJECT_GRAB_RAY_DISTANCE = 10
+
 func _ready():
-	pass
+	camera = $Head/Camera
+	Head = $Head
 
 func _physics_process(delta):
     if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
@@ -90,30 +104,72 @@ func inputandmovement(delta):
 	#Aktuelles Tool
 	if Input.is_action_pressed("Key1"):
 		current_tool_name = "TRANSLOCATOR"
-		print(current_tool_name)
+		print("Tool = Translocator")
 	if Input.is_action_pressed("Key2"):
 		current_tool_name = "UNARMED"
-		print(current_tool_name)
+		print("Tool = Unarmed")
 
-	#Fire
+	#Fire disc
 	if Input.is_action_just_pressed("primary.fire") and current_tool_name == "TRANSLOCATOR":
 		shootDisc()
-		print("Disc geschossen")
+
 		teleportAvailable = true
-
-	if Input.is_action_just_pressed("alt.fire") and teleportAvailable and current_tool_name == "TRANSLOCATOR":
-		#Teleportieren
+		timer = Timer.new()
+		timer.set_one_shot(true)
+		timer.set_wait_time(tp_delay)
+		timer.connect("timeout", self, "on_timeout_complete")
+		add_child(timer)
+		
+	#Teleport to disc
+	if Input.is_action_just_pressed("alt.fire") and teleportAvailable and current_tool_name == "TRANSLOCATOR" and can_tp:
 		var discPos = disc_clone.translation
+		discPos = discPos + Vector3(0,1,0) #Anti floor clipping
 		set_translation(discPos)
-
-		#Disc löschen
+		can_tp = false
+		timer.start()
+		
+		#Delete disc
 		disc_clone.queue_free()
 		disc_clone = null
 		teleportAvailable = false
-		print("Spieler wird teleportiert")
-		print("Disc gelÃ¶scht")
-
-
+		
+	#Grab objects
+	if Input.is_action_just_pressed("ui_E") and current_tool_name != "TRANSLOCATOR":
+		if grabbed_object == null:
+			# Get the direct space state so we can raycast into the world.
+			var state = get_world().direct_space_state
+			# Project the ray from the camera, using the center of the screen
+			var center_position = get_viewport().size/2
+			var ray_from = camera.project_ray_origin(center_position)
+			var ray_to = ray_from + camera.project_ray_normal(center_position) * OBJECT_GRAB_RAY_DISTANCE
+			# Send our ray into the space state and see if we got a result
+			var ray_result = state.intersect_ray(ray_from, ray_to, [self, $Head/Area])
+			if ray_result:
+				if ray_result["collider"] is RigidBody:
+					# Set grabbed object to the RigidBody
+					grabbed_object = ray_result["collider"]
+					# Set its mode to static so gravity does not effect it
+					grabbed_object.mode = RigidBody.MODE_STATIC
+					# Place it on collision layer and mask zero, which means it is not
+					# on any collision layer nor mask
+					grabbed_object.collision_layer = 0
+					grabbed_object.collision_mask = 0
+		# else: holding an object
+		else:
+			# Set the RigidBodys mode back to MODE_RIGID
+			grabbed_object.mode = RigidBody.MODE_RIGID
+			# Throw at direction
+			grabbed_object.apply_impulse(Vector3(0,0,0), -camera.global_transform.basis.z.normalized() * OBJECT_THROW_FORCE)
+			# Set its collision layer and mask back to one
+			grabbed_object.collision_layer = 1
+			grabbed_object.collision_mask = 1
+			#grabbed object to null, because we throw the object
+			grabbed_object = null
+	
+	if grabbed_object != null:
+		grabbed_object.global_transform.origin = camera.global_transform.origin + (-camera.global_transform.basis.z.normalized() * OBJECT_GRAB_DISTANCE)
+		
+	
 	var temp_velocity = velocity
 	temp_velocity.y = 0
 
@@ -122,7 +178,6 @@ func inputandmovement(delta):
 		speed = MAX_RUNNING_SPEED
 	else:
 		speed = MAX_SPEED
-
 
 	# where would the player go at max speed
 	var target = direction * speed
@@ -170,4 +225,6 @@ func shootDisc():
 	get_parent().add_child(disc_clone)
 	disc_clone.global_transform = $Head/Camera.global_transform
 	disc_clone.apply_impulse(Vector3(0,0,0), disc_clone.global_transform.basis.z * -DISC_SHOOT_FORCE)
-# TODO: Refactor Levels to use this Character instead of their own Gary
+
+func on_timeout_complete():
+	can_tp = true
