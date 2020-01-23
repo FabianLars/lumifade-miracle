@@ -102,7 +102,7 @@ func inputandmovement(delta):
 
 	#Tools:
 	#Aktuelles Tool
-	if Input.is_action_pressed("Key1") and grabbed_object != null:
+	if Input.is_action_pressed("Key1"):
 		current_tool_name = "TRANSLOCATOR"
 		print("Tool = Translocator")
 	if Input.is_action_pressed("Key2"):
@@ -152,13 +152,13 @@ func inputandmovement(delta):
 					grabbed_object.mode = RigidBody.MODE_STATIC
 					# Place it on collision layer and mask zero, which means it is not
 					# on any collision layer nor mask
-					grabbed_object.collision_layer = 1
-					grabbed_object.collision_mask = 1
+					grabbed_object.collision_layer = 0
+					grabbed_object.collision_mask = 0
 		# else: holding an object
 		else:
 			# Set the RigidBodys mode back to MODE_RIGID
 			grabbed_object.mode = RigidBody.MODE_RIGID
-			# Shoot at direction
+			# Throw at direction
 			grabbed_object.apply_impulse(Vector3(0,0,0), -camera.global_transform.basis.z.normalized() * OBJECT_THROW_FORCE)
 			# Set its collision layer and mask back to one
 			grabbed_object.collision_layer = 1
