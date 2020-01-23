@@ -81,7 +81,6 @@ size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 
 [node name="MenuContainer" type="HBoxContainer" parent="MainMenuContainer"]
-editor/display_folded = true
 margin_right = 560.0
 margin_bottom = 640.0
 rect_min_size = Vector2( 560, 640 )
@@ -198,7 +197,7 @@ margin_right = 295.0
 margin_bottom = 423.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 9 )
-text = "Fullscreen"
+text = "Vollbild"
 
 [node name="CheckMenumusic" type="CheckButton" parent="MainMenuContainer/MenuContainer/OptionsMenu"]
 margin_top = 427.0
@@ -235,7 +234,6 @@ text = "Zurück zum Hauptmenü"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainMenuContainer"]
 stream = ExtResource( 5 )
-autoplay = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource( 6 )

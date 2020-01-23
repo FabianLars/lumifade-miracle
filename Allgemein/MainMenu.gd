@@ -4,12 +4,14 @@ extends CenterContainer
 func _ready():
     Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
     Global.set_overlay(false)
+    load_settings()
     
 func load_settings():
     $MenuContainer/OptionsMenu/HSlider.value = db2linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
     $MenuContainer/OptionsMenu/CheckDebug.pressed = Global.debugdisplay
     $MenuContainer/OptionsMenu/CheckFullscreen.pressed = OS.window_fullscreen
     $MenuContainer/OptionsMenu/CheckMenumusic.pressed = Global.menumusic
+    $AudioStreamPlayer.playing = Global.menumusic
 
 
 func main_menu_continue_pressed():
