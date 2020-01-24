@@ -4,6 +4,7 @@ var cam = null
 var a=null
 var b=null
 var player=null
+var i=0
 func _ready():
 	cam=get_parent().get_node("Player/Head/Camera")
 	player=get_parent().get_node("Player")
@@ -20,8 +21,10 @@ func _process(delta):
 	var c=a.dot(b)
 	if get_translation().distance_to(get_parent().get_node("Player").get_translation())<4:
 		if acos(a.dot(b)) <= deg2rad(90):
-			get_parent().get_node("press").visible=true
+			if(i<1):
+				get_parent().get_node("press").visible=true
 			if Input.is_action_just_pressed("ui_Z")&& get_parent().get_node("Control_Board/LineEdit").is_editable()==false:
+				i=i+1
 				get_parent().get_node("press").visible=false
 				pause_mode = Node.PAUSE_MODE_PROCESS
 				get_parent().get_node("Camera_Board").current=not get_parent().get_node("Camera_Board").current
