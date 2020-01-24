@@ -485,11 +485,10 @@ transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 6.889
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.19062, 2.01258, 3.44334 )
 
 [node name="start_message" type="Control" parent="."]
-editor/display_folded = true
-margin_left = 40.6128
-margin_top = 16.0
-margin_right = 1222.61
-margin_bottom = 702.0
+margin_left = 402.718
+margin_top = 151.114
+margin_right = 1584.72
+margin_bottom = 837.114
 script = ExtResource( 49 )
 
 [node name="ColorRect" type="ColorRect" parent="start_message"]
@@ -624,18 +623,21 @@ darauf wo der Professor sich befindet .
 Am ende kannst du 
 Frau Albrecht per Handy informieren.
 
-Zum Navigieren im  
+Zum Navigieren:
+Taste T = Nachricht an Frau Albrecht
+Taste Z= Zoom IN/OUT und Tür öffnen
 
 Sei wachsam
 
  "
 
 [node name="message" type="Control" parent="."]
+editor/display_folded = true
 visible = false
-margin_left = 40.6128
-margin_top = 16.0
-margin_right = 1222.61
-margin_bottom = 702.0
+margin_left = 372.993
+margin_top = 153.816
+margin_right = 1554.99
+margin_bottom = 839.816
 script = ExtResource( 55 )
 
 [node name="ColorRect" type="ColorRect" parent="message"]
@@ -967,14 +969,14 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Drücke Z"
 
 [node name="Scene Root3" parent="." instance=ExtResource( 64 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.56786, 3.90822, -0.906601 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.002, 3.90822, -0.906601 )
 
 [node name="ende_color" type="ColorRect" parent="."]
 visible = false
-margin_left = 207.581
-margin_top = 164.178
-margin_right = 1066.58
-margin_bottom = 455.178
+margin_left = 566.984
+margin_top = 331.719
+margin_right = 1425.98
+margin_bottom = 622.719
 color = Color( 0.694118, 0.694118, 0.694118, 1 )
 
 [node name="ende" type="Label" parent="ende_color"]
