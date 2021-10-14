@@ -1,17 +1,14 @@
 extends Spatial
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var cam = null
 var a=null
 var b=null
 var player=null
+
 func _ready():
 	cam=get_parent().get_node("Player/Head/Camera")
 	player=get_parent().get_node("Player")
-	
+
 
 func _process(delta):
 	a=cam.get_global_transform().basis.z
@@ -39,7 +36,7 @@ func _process(delta):
 				get_parent().get_node("Control_Riddle4/LineEdit").connect("text_changed", self, "_on_text_changed")
 		else:
 			get_parent().get_node("press").visible=false
-				
+
 	#	else:
 	#		pause_mode = Node.PAUSE_MODE_INHERIT
 		#	get_parent().get_node("Control_Board").pause_mode=Node.PAUSE_MODE_INHERIT
@@ -49,4 +46,4 @@ func _on_text_changed(text):
 	if(get_parent().get_node("Control_Riddle4/LineEdit").get_text()=="33"):
 		get_parent().get_node("Control_Riddle4/LineEdit").set_editable(false)
 		get_parent().get_node("Teilcode2").set_text(get_parent().get_node("Teilcode2").get_text()+" 8 ")
-					
+

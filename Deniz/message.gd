@@ -1,9 +1,5 @@
 extends Control
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("Button2").connect("pressed",self,"_on_button_pressed")
@@ -26,12 +22,12 @@ func _process(delta):
 		get_node("Label4").visible=false
 		get_node("TextureRect5").visible=false
 		get_node("Label5").visible=false
-		
-		
-		
+
+
+
 
 func _on_button_pressed():
-	
+
 	if(get_node("TextureRect2").visible==false):
 		get_node("TextureRect2").visible=true
 		get_node("Label2").visible=true
@@ -46,7 +42,7 @@ func _on_button_pressed():
 		else:
 			get_node("TextureRect").visible=true
 			get_node("Label").visible=true
-			
+
 	elif (get_node("TextureRect2").visible==true &&get_node("TextureRect4").visible==false):
 		get_node("TextureRect4").visible=true
 		get_node("Label4").visible=true
@@ -61,7 +57,7 @@ func _on_button_pressed():
 		else:
 			get_node("TextureRect3").visible=true
 			get_node("Label3").visible=true
-			
+
 	elif (get_node("TextureRect2").visible==true &&get_node("TextureRect4").visible==true):
 		get_node("TextureRect").visible=false
 		get_node("Label").visible=false
@@ -73,10 +69,9 @@ func _on_button_pressed():
 		get_node("Label4").visible=false
 		get_node("TextureRect5").visible=false
 		get_node("Label5").visible=false
-		
-		
-	
+
+
+
 func _button_pressed2():
 	get_tree().paused=false;
 	visible=false
-		
